@@ -1,0 +1,8 @@
+{
+  "name": "Alcho Food Indonesia",
+  "description": "Cinematic seasoning excellence and premium flavor foundations for the global food industry.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
