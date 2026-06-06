@@ -12,6 +12,7 @@ import ScrollToTop from './components/common/ScrollToTop';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import ProductAdvisor from './components/advisor/ProductAdvisor';
+import { AlchoLogo } from './components/common/AlchoLogo';
 
 // Pages
 import Home from './pages/Home';
@@ -37,7 +38,8 @@ export default function App() {
           
           <main className="relative z-10 w-full min-h-screen">
             <Suspense fallback={
-              <div className="h-screen w-full flex items-center justify-center bg-brand-bg">
+              <div className="h-screen w-full flex flex-col items-center justify-center gap-8 bg-brand-bg">
+                <AlchoLogo className="h-16 animate-pulse" />
                 <div className="w-12 h-12 rounded-full border-2 border-brand-primary/20 border-t-brand-primary animate-spin" />
               </div>
             }>

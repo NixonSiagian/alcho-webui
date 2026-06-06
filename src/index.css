@@ -2,6 +2,13 @@
 @import "tailwindcss";
 
 /*
+  Exclude build-time tooling from Tailwind's automatic source scanning. The
+  scripts/ directory holds branding generators (and previously transient SVGs);
+  it is not UI source and must never enter the CSS/asset graph.
+*/
+@source not "../scripts";
+
+/*
   UI THEME TOKENS — Premium industrial food manufacturer palette.
   These variables theme the WEBSITE UI ONLY (backgrounds, surfaces, buttons,
   cards, nav, borders, typography, accents). They are never bound to the

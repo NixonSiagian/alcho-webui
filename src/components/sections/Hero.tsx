@@ -49,7 +49,7 @@ export default function Hero() {
               className="mb-8 flex justify-center"
             >
               {/* Logo rendered from its original asset — no filters or tint applied */}
-              <AlchoLogo className="w-48 md:w-72" />
+              <AlchoLogo className="h-24 md:h-36" />
             </motion.div>
 
             <motion.h1

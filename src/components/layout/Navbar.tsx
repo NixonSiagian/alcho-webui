@@ -95,10 +95,10 @@ export default function Navbar() {
           <Link
             to="/"
             onClick={() => setMobileMenuOpen(false)}
-            className="flex items-center relative z-[150] max-w-[40%]"
+            className="flex items-center relative z-[150] max-w-[55%]"
             aria-label="Alcho — home"
           >
-            <AlchoLogo className="w-24 sm:w-28 md:w-36" />
+            <AlchoLogo className="h-12 sm:h-14 md:h-16" />
           </Link>
 
           {/* Desktop Links */}
@@ -191,7 +191,7 @@ function MobileMenu({
           >
             {/* Panel header */}
             <div className="flex h-[72px] flex-none items-center justify-between border-b border-brand-border px-5">
-              <AlchoLogo className="w-24" />
+              <AlchoLogo className="h-11" />
               <button
                 type="button"
                 onClick={onClose}

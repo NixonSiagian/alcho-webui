@@ -41,7 +41,7 @@ export default function Footer() {
           
           <div className="lg:col-span-12 flex justify-center mb-16">
             <Link to="/" className="inline-block group text-center">
-              <AlchoLogo className="w-48 mx-auto" />
+              <AlchoLogo className="h-16 mx-auto" />
               <p className="text-[10px] uppercase font-bold tracking-[0.3em] text-brand-primary mt-4">
                 PT. NEW ALFA OMEGA UTAMA
               </p>
