@@ -12,9 +12,23 @@
 
 import { GoogleGenAI } from '@google/genai';
 import { retrieve } from './advisor-kb';
-import { ADVISOR_REFUSAL, getAdvisorApiKey } from './advisor-config';
+import { ADVISOR_REFUSAL, getAdvisorApiKey, getAdvisorKeyStatus } from './advisor-config';
 
 const MODEL = 'gemini-2.5-flash';
+const LOG = '[Alcho Advisor]';
+
+/** Structured error carrying the exact failing step + provider detail. */
+export class AdvisorError extends Error {
+  constructor(
+    message: string,
+    readonly step: 'NOT_CONFIGURED' | 'RETRIEVE' | 'GEMINI_CALL' | 'EMPTY_RESPONSE',
+    readonly status?: number,
+    readonly cause?: unknown,
+  ) {
+    super(message);
+    this.name = 'AdvisorError';
+  }
+}
 
 export { ADVISOR_REFUSAL };
 
@@ -81,10 +95,30 @@ export interface AdvisorResult {
 }
 
 export async function askAdvisor(history: AdvisorTurn[], query: string): Promise<AdvisorResult> {
-  const ai = getClient();
-  if (!ai) throw new Error('NOT_CONFIGURED');
+  const keyStatus = getAdvisorKeyStatus();
+  console.info(`${LOG} askAdvisor() — query length=${query.length}, history turns=${history.length}`);
+  console.info(`${LOG} env/key status:`, keyStatus);
 
-  const docs = retrieve(query, 6);
+  const ai = getClient();
+  if (!ai) {
+    console.error(`${LOG} STEP=NOT_CONFIGURED — no usable API key inlined in this build.`, keyStatus);
+    throw new AdvisorError(
+      keyStatus.looksPlaceholder
+        ? 'GEMINI_API_KEY is a placeholder value in this build.'
+        : 'GEMINI_API_KEY is missing from this build.',
+      'NOT_CONFIGURED',
+    );
+  }
+
+  let docs: ReturnType<typeof retrieve>;
+  try {
+    docs = retrieve(query, 6);
+    console.info(`${LOG} STEP=RETRIEVE — ${docs.length} grounding docs matched.`);
+  } catch (err) {
+    console.error(`${LOG} STEP=RETRIEVE failed`, err);
+    throw new AdvisorError('Knowledge-base retrieval failed.', 'RETRIEVE', undefined, err);
+  }
+
   const context = docs.length
     ? docs.map((d, i) => `[${i + 1}] (${d.source}) ${d.title}\n${d.text}`).join('\n\n')
     : 'No matching Alcho catalog, recipe, technical, or company information was found for this query.';
@@ -102,19 +136,39 @@ export async function askAdvisor(history: AdvisorTurn[], query: string): Promise
     ],
   });
 
-  const response = await ai.models.generateContent({
-    model: MODEL,
-    contents,
-    config: {
-      systemInstruction: SYSTEM_INSTRUCTION,
-      temperature: 0.2,
-      maxOutputTokens: 1024,
-      thinkingConfig: { thinkingBudget: 0 },
-    },
-  });
+  let response: Awaited<ReturnType<typeof ai.models.generateContent>>;
+  try {
+    console.info(`${LOG} STEP=GEMINI_CALL — model=${MODEL}, contents=${contents.length} parts`);
+    const t0 = Date.now();
+    response = await ai.models.generateContent({
+      model: MODEL,
+      contents,
+      config: {
+        systemInstruction: SYSTEM_INSTRUCTION,
+        temperature: 0.2,
+        maxOutputTokens: 1024,
+        thinkingConfig: { thinkingBudget: 0 },
+      },
+    });
+    console.info(`${LOG} STEP=GEMINI_CALL ok in ${Date.now() - t0}ms`);
+  } catch (err) {
+    const status = extractStatus(err);
+    console.error(`${LOG} STEP=GEMINI_CALL FAILED — status=${status ?? 'n/a'}`, err);
+    if (err instanceof Error && err.stack) console.error(`${LOG} stack:\n${err.stack}`);
+    throw new AdvisorError(
+      `Gemini request failed${status ? ` (HTTP ${status})` : ''}: ${
+        err instanceof Error ? err.message : String(err)
+      }`,
+      'GEMINI_CALL',
+      status,
+      err,
+    );
+  }
 
   const text = (response.text ?? '').trim();
+  console.info(`${LOG} response text length=${text.length}`);
   if (!text) {
+    console.warn(`${LOG} STEP=EMPTY_RESPONSE — model returned no text; treating as refusal.`);
     return { text: ADVISOR_REFUSAL, sources: [] };
   }
 
@@ -124,4 +178,15 @@ export async function askAdvisor(history: AdvisorTurn[], query: string): Promise
     : docs.slice(0, 4).map((d) => ({ title: d.title, source: d.source, ref: d.ref }));
 
   return { text, sources };
+}
+
+/** Best-effort extraction of an HTTP status from a GoogleGenAI / fetch error. */
+function extractStatus(err: unknown): number | undefined {
+  if (typeof err !== 'object' || err === null) return undefined;
+  const e = err as Record<string, unknown>;
+  if (typeof e.status === 'number') return e.status;
+  if (typeof e.code === 'number') return e.code;
+  const msg = typeof e.message === 'string' ? e.message : '';
+  const m = msg.match(/\b(4\d\d|5\d\d)\b/);
+  return m ? Number(m[1]) : undefined;
 }

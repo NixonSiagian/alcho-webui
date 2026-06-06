@@ -137,11 +137,32 @@ export default function ProductAdvisor() {
         { role: 'assistant', content: result.text, sources: result.sources },
       ]);
     } catch (err) {
-      const message =
-        err instanceof Error && err.message === 'NOT_CONFIGURED'
-          ? 'The advisor is not configured yet. Add a **GEMINI_API_KEY** to enable AI responses.'
-          : "Sorry, I couldn't reach the advisor right now. Please try again, or contact our team at **031 866 8858**.";
-      setMessages((prev) => [...prev, { role: 'assistant', content: message }]);
+      // Log the full error (step, status, stack) to the browser console so the
+      // exact failing point is visible in production, then surface the real
+      // reason to the user instead of a generic "couldn't reach" message.
+      console.error('[Alcho Advisor] request failed:', err);
+
+      const e = err as { name?: string; message?: string; step?: string; status?: number };
+      let content: string;
+      if (e?.step === 'NOT_CONFIGURED' || e?.message === 'NOT_CONFIGURED') {
+        content =
+          'The advisor is **not configured** on this deployment — the build is missing a valid `GEMINI_API_KEY`. ' +
+          'Set it on the production build, then redeploy. Meanwhile, browse the [Products](/products) and [Resources](/resources) pages.';
+      } else if (e?.step === 'GEMINI_CALL') {
+        const status = e.status ? ` (HTTP ${e.status})` : '';
+        const hint =
+          e.status === 400
+            ? ' — the API key looks invalid for this build.'
+            : e.status === 403
+              ? ' — the API key is blocked for this site (check HTTP-referrer / API restrictions in Google Cloud).'
+              : e.status === 429
+                ? ' — rate limit or quota exceeded.'
+                : '';
+        content = `**Advisor error${status}.** ${e.message ?? 'Gemini request failed.'}${hint}`;
+      } else {
+        content = `**Advisor error.** ${e?.message ?? String(err)}`;
+      }
+      setMessages((prev) => [...prev, { role: 'assistant', content }]);
     } finally {
       setLoading(false);
     }
