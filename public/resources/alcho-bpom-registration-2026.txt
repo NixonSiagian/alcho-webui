@@ -1,0 +1,20 @@
+ALCHO FOODS — BPOM REGISTRATION
+PT. NEW ALFA OMEGA UTAMA
+====================================================================
+
+CERTIFICATION : BPOM — Badan Pengawas Obat dan Makanan (Indonesia FDA)
+SCOPE         : Registered Alcho Foods product range
+STATUS        : Active
+
+Applicable Alcho Foods products are registered with BPOM. Official
+registration documentation (with registration numbers) is available on
+authorized request for compliance and distribution onboarding.
+
+CONTACT
+Quality Control Department
+Phone 031 866 8858 — WhatsApp 0812 4918 6623
+
+--------------------------------------------------------------------
+Digital placeholder. Replace with the official BPOM registration
+document (PDF) in /public/resources/ and update manifest.json
+(no code changes required).

@@ -64,7 +64,7 @@ export default function Journey() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-24">
           <div className="max-w-xl">
             <span className="text-brand-gold text-[11px] uppercase tracking-[0.4em] font-bold block mb-6">Production Ethics</span>
-            <h2 className="font-serif text-5xl md:text-7xl text-white mb-6 uppercase">
+            <h2 className="font-serif text-5xl md:text-7xl text-brand-text mb-6 uppercase">
               THE <span className="lux-gradient-text italic">JOURNEY.</span>
             </h2>
           </div>
@@ -85,11 +85,11 @@ export default function Journey() {
                     (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?q=80';
                   }}
                 />
-                <div className="absolute top-6 left-6 w-10 h-10 rounded-full border border-white/20 bg-black/40 backdrop-blur-md flex items-center justify-center text-brand-gold font-serif text-sm font-bold">
+                <div className="absolute top-6 left-6 w-10 h-10 rounded-full border border-brand-border-strong bg-black/40 backdrop-blur-md flex items-center justify-center text-brand-gold font-serif text-sm font-bold">
                   {step.icon}
                 </div>
               </div>
-              <h4 className="text-white font-serif text-2xl font-bold mb-4 uppercase tracking-widest">{step.title}</h4>
+              <h4 className="text-brand-text font-serif text-2xl font-bold mb-4 uppercase tracking-widest">{step.title}</h4>
               <p className="text-gray-500 text-xs leading-relaxed uppercase tracking-widest font-medium">
                 {step.desc}
               </p>

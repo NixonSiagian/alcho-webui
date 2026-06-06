@@ -17,7 +17,7 @@ export default function Products() {
       
       {/* Certifications Footer */}
       <section className="pb-24 px-6">
-        <div className="max-w-7xl mx-auto border-t border-white/5 pt-24 grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="max-w-7xl mx-auto border-t border-brand-border pt-24 grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
             { label: "MUI Halal", val: "Indonesian Standard" },
             { label: "FSSC 22000", val: "Food Safety Grade" },
@@ -26,7 +26,7 @@ export default function Products() {
           ].map((c, i) => (
             <div key={i} className="space-y-2">
               <p className="text-brand-primary text-xs font-bold uppercase tracking-widest">{c.label}</p>
-              <p className="text-white text-lg">{c.val}</p>
+              <p className="text-brand-text text-lg">{c.val}</p>
             </div>
           ))}
         </div>

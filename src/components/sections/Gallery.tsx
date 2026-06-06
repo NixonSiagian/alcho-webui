@@ -55,7 +55,7 @@ export default function Gallery() {
             >
               VISUAL CAPABILITIES
             </motion.span>
-            <h2 className="text-white text-5xl lg:text-8xl font-serif font-black mb-0 leading-none">
+            <h2 className="text-brand-text text-5xl lg:text-8xl font-serif font-black mb-0 leading-none">
               Production <br />
               <span className="italic text-brand-yellow">Journey.</span>
             </h2>
@@ -73,7 +73,7 @@ export default function Gallery() {
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            className="lg:col-span-3 lg:row-span-2 group relative rounded-3xl overflow-hidden border border-white/5"
+            className="lg:col-span-3 lg:row-span-2 group relative rounded-3xl overflow-hidden border border-brand-border"
           >
             <SafeImage 
               src={GALLERY_ITEMS[0].image} 
@@ -84,7 +84,7 @@ export default function Gallery() {
             <div className="absolute bottom-12 left-12">
                <HeroIcon className="text-brand-yellow mb-6" size={40} />
                <span className="text-[10px] uppercase font-black tracking-widest text-brand-yellow/70 block mb-2">{GALLERY_ITEMS[0].category}</span>
-               <h3 className="text-white text-4xl font-serif font-black">{GALLERY_ITEMS[0].title}</h3>
+               <h3 className="text-brand-text text-4xl font-serif font-black">{GALLERY_ITEMS[0].title}</h3>
             </div>
           </motion.div>
 
@@ -96,13 +96,13 @@ export default function Gallery() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
-                className="group relative h-[340px] rounded-3xl overflow-hidden border border-white/5"
+                className="group relative h-[340px] rounded-3xl overflow-hidden border border-brand-border"
               >
                 <SafeImage src={item.image} alt={item.title} className="group-hover:scale-110 transition-transform duration-1000" />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-transparent to-transparent opacity-90" />
                 <div className="absolute bottom-8 left-8">
                   <span className="text-[9px] uppercase font-black tracking-widest text-brand-yellow/60 block mb-1">{item.category}</span>
-                  <h4 className="text-white font-serif font-black text-xl">{item.title}</h4>
+                  <h4 className="text-brand-text font-serif font-black text-xl">{item.title}</h4>
                 </div>
               </motion.div>
             ))}
@@ -115,13 +115,13 @@ export default function Gallery() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
-                className="group relative h-[340px] rounded-3xl overflow-hidden border border-white/5"
+                className="group relative h-[340px] rounded-3xl overflow-hidden border border-brand-border"
               >
                 <SafeImage src={item.image} alt={item.title} className="group-hover:scale-110 transition-transform duration-1000" />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-transparent to-transparent opacity-90" />
                 <div className="absolute bottom-8 left-8">
                   <span className="text-[9px] uppercase font-black tracking-widest text-brand-yellow/60 block mb-1">{item.category}</span>
-                  <h4 className="text-white font-serif font-black text-xl">{item.title}</h4>
+                  <h4 className="text-brand-text font-serif font-black text-xl">{item.title}</h4>
                 </div>
               </motion.div>
             ))}
@@ -131,11 +131,11 @@ export default function Gallery() {
         <motion.div 
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          className="mt-24 p-12 border-y border-white/5 flex flex-wrap justify-between items-center gap-12"
+          className="mt-24 p-12 border-y border-brand-border flex flex-wrap justify-between items-center gap-12"
         >
           <div className="flex items-center gap-8">
              <div className="h-[1px] w-12 bg-brand-yellow" />
-             <p className="text-white font-serif font-black text-2xl">Partner Network Highlights</p>
+             <p className="text-brand-text font-serif font-black text-2xl">Partner Network Highlights</p>
           </div>
           <div className="flex flex-wrap gap-12">
             {["Hotel Chains", "Snack Brands", "Cloud Kitchens", "Distributors"].map(item => (

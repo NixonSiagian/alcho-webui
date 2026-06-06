@@ -1,0 +1,30 @@
+ALCHO FOODS — TECHNICAL DATA SHEET (TDS) 2026
+PT. NEW ALFA OMEGA UTAMA
+====================================================================
+
+PURPOSE
+Technical Data Sheets describe the ingredient composition, physical
+characteristics, nutritional analysis, recommended dosage, and storage
+conditions for each Alcho Foods product, for industrial compliance and
+formulation use.
+
+TYPICAL CONTENTS PER PRODUCT
+- Product code and full product name
+- Appearance, color, aroma and solubility
+- Ingredient declaration and allergen statement
+- Nutritional information (per 100 g)
+- Recommended usage / dosage range
+- Microbiological & physicochemical specifications
+- Packaging formats and shelf life
+- Storage and handling recommendations
+
+AVAILABILITY
+Product-specific TDS documents are issued by the Quality Control department
+on authorized request and for active commercial accounts.
+
+CONTACT
+QC Department — Phone 031 866 8858 — WhatsApp 0812 4918 6623
+
+--------------------------------------------------------------------
+Digital placeholder. Replace with the official signed TDS PDF in
+/public/resources/ and update manifest.json (no code changes required).

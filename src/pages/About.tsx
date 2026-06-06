@@ -14,7 +14,7 @@ export default function About() {
   return (
     <div className="pt-24 min-h-screen bg-brand-bg">
       <SEO title="Our Heritage" description="PT. NEW ALFA OMEGA UTAMA history and commitment to industrial flavor purity." />
-      <section className="py-24 px-6 border-b border-white/5">
+      <section className="py-24 px-6 border-b border-brand-border">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

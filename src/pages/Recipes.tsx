@@ -15,7 +15,7 @@ export default function Recipes() {
       <RecipeCenter />
       
       {/* Resource Highlight */}
-      <section className="py-24 max-w-7xl mx-auto px-6 bg-brand-surface rounded-[4rem] mb-24 border border-white/5 text-center">
+      <section className="py-24 max-w-7xl mx-auto px-6 bg-brand-surface rounded-[4rem] mb-24 border border-brand-border text-center">
         <h3 className="text-3xl md:text-5xl font-bold mb-8">Need custom <span className="italic text-brand-primary">Flavor Development?</span></h3>
         <p className="text-brand-text-secondary text-xl max-w-2xl mx-auto mb-12 italic">
           "The recipe is only as good as the consistency of its ingredients. We help you standardize your signature taste for mass scale."

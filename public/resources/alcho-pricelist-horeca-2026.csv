@@ -1,0 +1,69 @@
+Code,Product,Category,Pack Size,Price per Pcs (IDR),Price per Box (IDR),Certification
+SB-001,Alcho Smokey Barbeque Sauce,Sauces & Bumbu Dasar,20 x 500 Gr,55000,1100000,HALAL MUI
+SB-002,Alcho Soy Honey Sauce,Sauces & Bumbu Dasar,20 x 1 Kg,62500,1250000,HALAL MUI
+SB-003,Alcho Tako Yaky,Sauces & Bumbu Dasar,20 x 500 Gr,55000,1100000,HALAL MUI
+SB-004,Alcho Black Paper Sauce,Sauces & Bumbu Dasar,20 x 500 Gr,51500,1030000,HALAL MUI
+BS-001,Alcho Chicken Powder,Bouillon & Seasoning,25 x 1 Kg,72000,1800000,HALAL MUI
+BS-002,Alcho Chicken Powder Non MSG,Bouillon & Seasoning,25 x 1 Kg,75000,1875000,HALAL MUI
+BS-003,Alcho Beef Powder,Bouillon & Seasoning,25 x 1 Kg,77000,1925000,HALAL MUI
+BS-003,Alcho Beef Powder,Bouillon & Seasoning,25 x 500 Gr,32500,812500,HALAL MUI
+BS-004,Alcho Beef Powder Non MSG,Bouillon & Seasoning,25 x 1 Kg,80000,2000000,HALAL MUI
+BS-005,Alcho Garlic Granule,Bouillon & Seasoning,25 x 1 Kg,75000,1875000,HALAL MUI
+BS-005,Alcho Garlic Granule,Bouillon & Seasoning,25 x 500 Gr,37500,937500,HALAL MUI
+BS-006,Alcho Tepung Kremes,Bouillon & Seasoning,25 x 1 Kg,34500,862500,HALAL MUI
+BS-006,Alcho Tepung Kremes,Bouillon & Seasoning,25 x 500 Gr,17250,431250,HALAL MUI
+BS-007,Alcho Barbeque Seasoning,Bouillon & Seasoning,25 x 1 Kg,38000,950000,HALAL MUI
+BS-007,Alcho Barbeque Seasoning,Bouillon & Seasoning,25 x 500 Gr,19000,475000,HALAL MUI
+BS-008,Alcho Garlic Powder,Bouillon & Seasoning,25 x 1 Kg,52000,1300000,HALAL MUI
+BS-008,Alcho Garlic Powder,Bouillon & Seasoning,25 x 500 Gr,26000,650000,HALAL MUI
+BS-009,Alcho Chicken Powder BBQ,Bouillon & Seasoning,25 x 1 Kg,47500,1187500,HALAL MUI
+BS-009,Alcho Chicken Powder BBQ,Bouillon & Seasoning,25 x 500 Gr,23750,593750,HALAL MUI
+BS-010,Alcho Bumbu Kuah Bakso,Bouillon & Seasoning,25 x 1 Kg,52000,1300000,HALAL MUI
+BS-010,Alcho Bumbu Kuah Bakso,Bouillon & Seasoning,25 x 500 Gr,26000,650000,HALAL MUI
+BS-010,Alcho Bumbu Kuah Bakso,Bouillon & Seasoning,25 x 250 Gr,13000,325000,HALAL MUI
+BS-011,Alcho Bumbu Kaldu Sapi,Bouillon & Seasoning,25 x 1 Kg,53500,1337500,HALAL MUI
+BS-011,Alcho Bumbu Kaldu Sapi,Bouillon & Seasoning,25 x 500 Gr,26750,668750,HALAL MUI
+BS-011,Alcho Bumbu Kaldu Sapi,Bouillon & Seasoning,25 x 250 Gr,13375,334375,HALAL MUI
+BS-012,Alcho Bumbu Kuah Ayam,Bouillon & Seasoning,25 x 1 Kg,52500,1312500,HALAL MUI
+BS-012,Alcho Bumbu Kuah Ayam,Bouillon & Seasoning,25 x 500 Gr,26250,656250,HALAL MUI
+BS-012,Alcho Bumbu Kuah Ayam,Bouillon & Seasoning,25 x 250 Gr,13125,328125,HALAL MUI
+BS-013,Alcho Lada Putih,Bouillon & Seasoning,25 x 1 Kg,48500,1212500,HALAL MUI
+BS-013,Alcho Lada Putih,Bouillon & Seasoning,25 x 500 Gr,24250,606250,HALAL MUI
+BS-013,Alcho Lada Putih,Bouillon & Seasoning,25 x 250 Gr,12125,303125,HALAL MUI
+BS-014,Alcho Bumbu Kaldu Ayam,Bouillon & Seasoning,25 x 1 Kg,56500,1412500,HALAL MUI
+BS-014,Alcho Bumbu Kaldu Ayam,Bouillon & Seasoning,25 x 500 Gr,28250,706250,HALAL MUI
+BS-014,Alcho Bumbu Kaldu Ayam,Bouillon & Seasoning,25 x 250 Gr,14125,353125,HALAL MUI
+BS-015,Alcho Bumbu Kuah Ayam,Bouillon & Seasoning,25 x 1 Kg,47000,1175000,HALAL MUI
+BS-015,Alcho Bumbu Kuah Ayam,Bouillon & Seasoning,25 x 500 Gr,23500,587500,HALAL MUI
+BS-015,Alcho Bumbu Kuah Ayam,Bouillon & Seasoning,25 x 250 Gr,11750,293750,HALAL MUI
+SS-001,Alcho Bumbu Tabur Balado,Snack Seasoning,25 x 1 Kg,38500,962500,HALAL MUI
+SS-001,Alcho Bumbu Tabur Balado,Snack Seasoning,25 x 500 Gr,20250,506250,HALAL MUI
+SS-001,Alcho Bumbu Tabur Balado,Snack Seasoning,25 x 250 Gr,11125,278125,HALAL MUI
+SS-002,Alcho Balado Pedas Manis,Snack Seasoning,25 x 1 Kg,38500,962500,HALAL MUI
+SS-002,Alcho Balado Pedas Manis,Snack Seasoning,25 x 500 Gr,20250,506250,HALAL MUI
+SS-002,Alcho Balado Pedas Manis,Snack Seasoning,25 x 250 Gr,11125,278125,HALAL MUI
+SS-003,Alcho Jagung Manis,Snack Seasoning,25 x 1 Kg,38500,962500,HALAL MUI
+SS-003,Alcho Jagung Manis,Snack Seasoning,25 x 500 Gr,20250,506250,HALAL MUI
+SS-003,Alcho Jagung Manis,Snack Seasoning,25 x 250 Gr,11125,278125,HALAL MUI
+SS-004,Alcho Jagung Bakar,Snack Seasoning,25 x 1 Kg,38500,962500,HALAL MUI
+SS-004,Alcho Jagung Bakar,Snack Seasoning,25 x 500 Gr,20250,506250,HALAL MUI
+SS-004,Alcho Jagung Bakar,Snack Seasoning,25 x 250 Gr,11125,278125,HALAL MUI
+SS-005,Alcho Cheese,Snack Seasoning,25 x 1 Kg,39000,975000,HALAL MUI
+SS-005,Alcho Cheese,Snack Seasoning,25 x 500 Gr,20500,512500,HALAL MUI
+SS-005,Alcho Cheese,Snack Seasoning,25 x 250 Gr,11250,281250,HALAL MUI
+SS-006,Alcho Udang Pedas Manis,Snack Seasoning,25 x 1 Kg,38500,962500,HALAL MUI
+SS-006,Alcho Udang Pedas Manis,Snack Seasoning,25 x 500 Gr,20250,506250,HALAL MUI
+SS-007,Alcho Bumbu Barbeque Manis,Snack Seasoning,25 x 1 Kg,38500,962500,HALAL MUI
+SS-007,Alcho Bumbu Barbeque Manis,Snack Seasoning,25 x 500 Gr,20250,506250,HALAL MUI
+SS-007,Alcho Bumbu Barbeque Manis,Snack Seasoning,25 x 250 Gr,11125,278125,HALAL MUI
+SS-008,Alcho Ayam Barbeque,Snack Seasoning,25 x 1 Kg,38500,962500,HALAL MUI
+SS-008,Alcho Ayam Barbeque,Snack Seasoning,25 x 500 Gr,20250,506250,HALAL MUI
+SS-008,Alcho Ayam Barbeque,Snack Seasoning,25 x 250 Gr,11125,278125,HALAL MUI
+SS-009,Alcho Bumbu Ayam Panggang,Snack Seasoning,25 x 1 Kg,38500,962500,HALAL MUI
+SS-009,Alcho Bumbu Ayam Panggang,Snack Seasoning,25 x 500 Gr,20250,506250,HALAL MUI
+SS-009,Alcho Bumbu Ayam Panggang,Snack Seasoning,25 x 250 Gr,11125,278125,HALAL MUI
+SS-010,Alcho Rumput Laut,Snack Seasoning,25 x 1 Kg,38500,962500,HALAL MUI
+SS-010,Alcho Rumput Laut,Snack Seasoning,25 x 500 Gr,20250,506250,HALAL MUI
+SS-010,Alcho Rumput Laut,Snack Seasoning,25 x 250 Gr,11125,278125,HALAL MUI
+NOTE,Prices exclude PPN 11% and may change subject to raw material costs,,,,,
+NOTE,PT. NEW ALFA OMEGA UTAMA - Telp 031 866 8858 - WhatsApp 0812 4918 6623,,,,,

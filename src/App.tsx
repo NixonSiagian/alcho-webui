@@ -11,10 +11,12 @@ import ScrollToTop from './components/common/ScrollToTop';
 // Layout
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
+import ProductAdvisor from './components/advisor/ProductAdvisor';
 
 // Pages
 import Home from './pages/Home';
 const Products = lazy(() => import('./pages/Products'));
+const ProductTechnical = lazy(() => import('./pages/ProductTechnical'));
 const Recipes = lazy(() => import('./pages/Recipes'));
 const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
@@ -23,13 +25,14 @@ const OEM = lazy(() => import('./pages/OEM'));
 const Distributor = lazy(() => import('./pages/Distributor'));
 const Gallery = lazy(() => import('./pages/Gallery'));
 const Resources = lazy(() => import('./pages/Resources'));
+const Intelligence = lazy(() => import('./pages/Intelligence'));
 
 export default function App() {
   return (
     <Router>
       <ScrollToTop />
       <LenisProvider>
-        <div className="relative bg-brand-bg text-white font-sans selection:bg-brand-primary selection:text-brand-bg overflow-x-hidden">
+        <div className="relative bg-brand-bg text-brand-text font-sans selection:bg-brand-primary selection:text-brand-text overflow-x-hidden">
           <Navbar />
           
           <main className="relative z-10 w-full min-h-screen">
@@ -41,6 +44,7 @@ export default function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/products" element={<Products />} />
+                <Route path="/products/:code" element={<ProductTechnical />} />
                 <Route path="/recipes" element={<Recipes />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
@@ -49,6 +53,7 @@ export default function App() {
                 <Route path="/distributor" element={<Distributor />} />
                 <Route path="/gallery" element={<Gallery />} />
                 <Route path="/resources" element={<Resources />} />
+                <Route path="/intelligence" element={<Intelligence />} />
                 {/* Fallback */}
                 <Route path="*" element={<Home />} />
               </Routes>
@@ -56,6 +61,7 @@ export default function App() {
           </main>
 
           <Footer />
+          <ProductAdvisor />
         </div>
       </LenisProvider>
     </Router>

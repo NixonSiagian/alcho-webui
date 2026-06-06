@@ -7,6 +7,7 @@ import { useRef, useEffect } from 'react';
 import { motion } from 'motion/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { IMG } from '../../assets/images';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,32 +15,32 @@ const STAGES = [
   {
     title: "Source",
     description: "Our flavor journey starts at the origin. We source the finest spices across the archipelago, from Lampung peppercorns to Padang cinnamon.",
-    image: "https://images.unsplash.com/photo-1549590143-d5855148a9d5?q=80&w=1200",
-    color: "#801818"
+    image: IMG.product,
+    color: "#C99A2E"
   },
   {
     title: "Milling",
     description: "Preserving the soul of the spice. Advanced cryogenic milling locks in the aromatherapy and essential oils of our raw ingredients.",
-    image: "https://images.unsplash.com/photo-1590089415225-401ed6f9db8e?q=80&w=1200",
-    color: "#E34A2B"
+    image: IMG.factory,
+    color: "#A65A2A"
   },
   {
     title: "Blending",
     description: "Scientific precision in every batch. Our laboratory-controlled environment ensures zero variance in your proprietary flavor profiles.",
-    image: "https://images.unsplash.com/photo-1615484477778-ca3b77940c25?q=80&w=1200",
-    color: "#FFB347"
+    image: IMG.lab,
+    color: "#3F5F3A"
   },
   {
     title: "Culinary",
     description: "From our production lines to the world's most demanding professional kitchens and industrial food manufacturers.",
-    image: "https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200",
-    color: "#FF4500"
+    image: IMG.chef,
+    color: "#C99A2E"
   },
   {
     title: "Taste",
     description: "The final proof of excellence. Consistent, deep, and authentically Indonesian flavor systems that define market leaders.",
-    image: "https://images.unsplash.com/photo-1596797038530-2c39fa81b487?q=80&w=1200",
-    color: "#1C1111"
+    image: IMG.hero,
+    color: "#A65A2A"
   }
 ];
 
@@ -108,7 +109,7 @@ export default function FlavorJourney() {
                        initial={{ opacity: 0, y: 30 }}
                        whileInView={{ opacity: 1, y: 0 }}
                        transition={{ duration: 1 }}
-                       className="text-white text-6xl md:text-9xl mb-8 leading-none"
+                       className="text-brand-text text-6xl md:text-9xl mb-8 leading-none"
                     >
                       {stage.title}
                     </motion.h2>
@@ -137,7 +138,7 @@ export default function FlavorJourney() {
                  {[...Array(STAGES.length)].map((_, idx) => (
                     <div 
                       key={idx}
-                      className={`h-1 transition-all duration-500 rounded-full ${idx === i ? 'w-12 bg-brand-primary' : 'w-4 bg-white/10'}`}
+                      className={`h-1 transition-all duration-500 rounded-full ${idx === i ? 'w-12 bg-brand-primary' : 'w-4 bg-brand-border-strong'}`}
                     />
                  ))}
               </div>

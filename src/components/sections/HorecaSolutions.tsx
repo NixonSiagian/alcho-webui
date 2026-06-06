@@ -51,7 +51,7 @@ export default function HorecaSolutions() {
                         <div className="h-[1px] w-12 bg-brand-primary" />
                         <span className="text-brand-primary text-xs font-bold tracking-[0.4em] uppercase">Industry Selection</span>
                     </motion.div>
-                    <h2 className="text-white text-5xl md:text-8xl mb-8 leading-tight">Scale Your <br /><span className="italic text-brand-primary">Framework.</span></h2>
+                    <h2 className="text-brand-text text-5xl md:text-8xl mb-8 leading-tight">Scale Your <br /><span className="italic text-brand-primary">Framework.</span></h2>
                     <p className="text-xl text-brand-text-secondary leading-relaxed max-w-xl">
                       Select your operational model to see how Alcho's technical seasoning systems integrate with your business architecture.
                     </p>
@@ -64,8 +64,8 @@ export default function HorecaSolutions() {
                         onClick={() => setActive(item)}
                         className={`w-full group p-8 rounded-[2rem] border transition-all text-left flex items-center gap-8 ${
                           active.id === item.id 
-                            ? 'bg-brand-primary border-brand-primary text-brand-bg shadow-2xl' 
-                            : 'bg-brand-bg/50 border-white/5 text-white hover:border-brand-primary/30'
+                            ? 'bg-brand-primary border-brand-primary text-brand-text shadow-2xl' 
+                            : 'bg-brand-bg/50 border-brand-border text-brand-text hover:border-brand-primary/30'
                         }`}
                       >
                          <div className={`w-16 h-16 rounded-2xl flex items-center justify-center transition-colors ${
@@ -75,7 +75,7 @@ export default function HorecaSolutions() {
                          </div>
                          <div className="flex-1">
                             <h4 className="text-2xl font-bold mb-1">{item.name}</h4>
-                            <p className={`text-sm ${active.id === item.id ? 'text-brand-bg/60' : 'text-brand-text-secondary'}`}>
+                            <p className={`text-sm ${active.id === item.id ? 'text-brand-text/60' : 'text-brand-text-secondary'}`}>
                                Industrial solutions for {item.name.toLowerCase()}
                             </p>
                          </div>
@@ -93,19 +93,19 @@ export default function HorecaSolutions() {
                         animate={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0, scale: 0.95 }}
                         transition={{ duration: 0.5 }}
-                        className="bg-brand-bg rounded-[4rem] border border-white/5 overflow-hidden shadow-2xl"
+                        className="bg-brand-bg rounded-[4rem] border border-brand-border overflow-hidden shadow-2xl"
                     >
                         <div className="h-96 relative">
                             <img src={active.image} alt={active.name} className="w-full h-full object-cover grayscale brightness-50" />
                             <div className="absolute inset-0 bg-gradient-to-t from-brand-bg via-brand-bg/20 to-transparent" />
-                            <div className="absolute top-10 left-10 p-4 bg-brand-primary/80 backdrop-blur-xl rounded-2xl text-brand-bg">
+                            <div className="absolute top-10 left-10 p-4 bg-brand-primary/80 backdrop-blur-xl rounded-2xl text-brand-text">
                                 <active.icon size={32} />
                             </div>
                         </div>
                         
                         <div className="p-12 space-y-12">
                             <div>
-                                <h3 className="text-white text-3xl mb-6">{active.name}</h3>
+                                <h3 className="text-brand-text text-3xl mb-6">{active.name}</h3>
                                 <p className="text-brand-text-secondary text-lg leading-relaxed">
                                     {active.description}
                                 </p>
@@ -113,9 +113,9 @@ export default function HorecaSolutions() {
 
                             <div className="space-y-6">
                                 {active.points.map((point, i) => (
-                                    <div key={i} className="flex items-center gap-4 text-white">
+                                    <div key={i} className="flex items-center gap-4 text-brand-text">
                                         <div className="p-1 bg-brand-primary rounded-full">
-                                            <Zap size={10} className="text-brand-bg" fill="currentColor" />
+                                            <Zap size={10} className="text-brand-text" fill="currentColor" />
                                         </div>
                                         <span className="font-bold text-sm uppercase tracking-widest">{point}</span>
                                     </div>

@@ -1,17 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
 @import "tailwindcss";
 
+/*
+  UI THEME TOKENS — Premium industrial food manufacturer palette.
+  These variables theme the WEBSITE UI ONLY (backgrounds, surfaces, buttons,
+  cards, nav, borders, typography, accents). They are never bound to the
+  Alcho logo or to product/packaging photography.
+*/
 @theme {
-  --color-brand-bg: #080808;
-  --color-brand-surface: #120A0A;
-  --color-brand-card: #1C1111;
-  --color-brand-primary: #FFB347;
-  --color-brand-accent: #E34A2B;
-  --color-brand-text: #F5F5F5;
-  --color-brand-text-secondary: #B0B5C0;
-  --color-brand-maroon: #801818;
-  --color-brand-fire: #FF4500;
-  --color-brand-ember: #FF8C00;
+  /* Surfaces */
+  --color-brand-bg: #F8F5EE;          /* Warm cream — dominant background */
+  --color-brand-surface: #FFFFFF;     /* White — sections & raised cards */
+  --color-brand-card: #FFFFFF;        /* White — cards (defined by border) */
+
+  /* Brand accents */
+  --color-brand-primary: #C99A2E;     /* Gold Spice — primary accent / CTA */
+  --color-brand-secondary: #A65A2A;   /* Roasted Spice — deep warm accent */
+  --color-brand-accent: #3F5F3A;      /* Herb Green — fresh accent */
+
+  /* Legacy aliases (kept in sync with the palette) */
+  --color-brand-maroon: #A65A2A;
+  --color-brand-fire: #C99A2E;
+  --color-brand-ember: #A65A2A;
+
+  /* Typography — black reserved for type only */
+  --color-brand-text: #1F1F1F;            /* Primary text */
+  --color-brand-text-secondary: #5A5A5A;  /* Muted text */
+
+  /* Hairlines & subtle fills */
+  --color-brand-border: #E6DED0;          /* subtle hairline */
+  --color-brand-border-strong: #D8CDB8;   /* stronger divider / hover */
+  --color-brand-fill: #F1ECE0;            /* subtle chip / surface fill */
 
   --font-serif: "Outfit", ui-serif, system-ui, serif;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
@@ -22,45 +41,46 @@
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
-    @apply bg-brand-bg text-brand-text font-sans antialiased selection:bg-brand-primary selection:text-brand-bg;
+    @apply bg-brand-bg text-brand-text font-sans antialiased selection:bg-brand-primary/30 selection:text-brand-text;
   }
 
   /* Responsive Typography */
-  h1 { @apply text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-serif font-bold tracking-tight leading-[1.1]; }
-  h2 { @apply text-3xl sm:text-4xl md:text-5xl font-serif font-semibold tracking-tight; }
+  h1 { @apply text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-serif font-bold tracking-tight leading-[1.1] text-brand-text; }
+  h2 { @apply text-3xl sm:text-4xl md:text-5xl font-serif font-semibold tracking-tight text-brand-text; }
   h3 { @apply text-xl sm:text-2xl md:text-4xl font-serif font-semibold leading-tight text-brand-text; }
-  
+
   p { @apply leading-relaxed text-brand-text-secondary; }
 }
 
 .modern-card {
-  @apply bg-brand-card border border-white/5 rounded-2xl p-8 transition-all hover:border-brand-primary/20;
+  @apply bg-brand-surface border border-brand-border rounded-2xl p-8 transition-all hover:border-brand-primary/40 hover:shadow-xl hover:shadow-black/5;
 }
 
 .glass {
-  @apply bg-brand-bg/40 backdrop-blur-xl border border-white/5;
+  @apply bg-brand-bg/70 backdrop-blur-xl border border-brand-border;
 }
 
+/* Gold primary uses dark type for crisp, accessible contrast on the gold fill */
 .btn-primary {
-  @apply px-8 py-4 rounded-xl font-sans font-bold text-sm tracking-wide transition-all duration-300 active:scale-95 bg-brand-primary text-brand-bg hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed;
+  @apply px-8 py-4 rounded-xl font-sans font-bold text-sm tracking-wide transition-all duration-300 active:scale-95 bg-brand-primary text-brand-text hover:bg-brand-secondary hover:text-white shadow-lg shadow-brand-primary/25 disabled:opacity-50 disabled:cursor-not-allowed;
 }
 
 .btn-secondary {
-  @apply px-8 py-4 rounded-xl font-sans font-bold text-sm tracking-wide transition-all duration-300 active:scale-95 bg-brand-surface border border-white/10 text-brand-text hover:bg-brand-card disabled:opacity-50 disabled:cursor-not-allowed;
+  @apply px-8 py-4 rounded-xl font-sans font-bold text-sm tracking-wide transition-all duration-300 active:scale-95 bg-brand-surface border border-brand-border-strong text-brand-text hover:bg-brand-fill disabled:opacity-50 disabled:cursor-not-allowed;
 }
 
 .chip {
-  @apply px-4 py-2 rounded-lg text-xs font-bold tracking-wider transition-all border border-white/5;
+  @apply px-4 py-2 rounded-lg text-xs font-bold tracking-wider transition-all border border-brand-border;
 }
 
 .chip-active {
-  @apply bg-brand-primary/10 text-brand-primary border-brand-primary/20;
+  @apply bg-brand-primary/15 text-brand-secondary border-brand-primary/30;
 }
 
 .chip-inactive {
-  @apply bg-white/5 text-brand-text-secondary hover:bg-white/10 hover:text-brand-text;
+  @apply bg-brand-fill text-brand-text-secondary hover:bg-brand-border-strong hover:text-brand-text;
 }
 
 .no-scrollbar::-webkit-scrollbar {
@@ -76,4 +96,19 @@
 }
 html.lenis {
   height: auto;
+}
+
+/* Print: render Technical Data Sheets as clean documents */
+@media print {
+  nav,
+  footer,
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: #ffffff;
+  }
+  .print-block {
+    break-inside: avoid;
+  }
 }

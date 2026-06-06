@@ -32,7 +32,7 @@ export default function BestSellers() {
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="text-white mb-0"
+              className="text-brand-text mb-0"
             >
               Flagship <span className="italic text-brand-primary">Taste Foundations.</span>
             </motion.h2>
@@ -58,7 +58,7 @@ export default function BestSellers() {
               key={product?.code}
               className="group relative"
             >
-              <div className="h-[450px] relative rounded-[3rem] bg-brand-surface border border-white/5 group-hover:border-brand-primary/30 transition-all duration-500 flex flex-col items-start p-12 overflow-hidden">
+              <div className="h-[450px] relative rounded-[3rem] bg-brand-surface border border-brand-border group-hover:border-brand-primary/30 transition-all duration-500 flex flex-col items-start p-12 overflow-hidden">
                  
                  <div className="flex justify-between w-full items-center mb-12">
                     <span className="text-[10px] font-mono font-bold tracking-widest text-brand-text-secondary">{product?.code}</span>
@@ -71,7 +71,7 @@ export default function BestSellers() {
                    </div>
                  </div>
 
-                 <h3 className="text-2xl text-white mb-4 leading-tight group-hover:text-brand-primary transition-colors">
+                 <h3 className="text-2xl text-brand-text mb-4 leading-tight group-hover:text-brand-primary transition-colors">
                    {product?.name}
                  </h3>
                  
@@ -83,8 +83,8 @@ export default function BestSellers() {
                     <p className="text-[10px] text-brand-text-secondary line-clamp-2 leading-relaxed opacity-60">
                       Standardized for industrial application with high-yield solubility metrics.
                     </p>
-                    <div className="pt-6 border-t border-white/5 flex items-center justify-between">
-                       <span className="text-[10px] text-white font-bold uppercase tracking-widest">Spec Sheet 4.2</span>
+                    <div className="pt-6 border-t border-brand-border flex items-center justify-between">
+                       <span className="text-[10px] text-brand-text font-bold uppercase tracking-widest">Spec Sheet 4.2</span>
                        <ArrowUpRight size={14} className="text-brand-primary" />
                     </div>
                  </div>
@@ -100,7 +100,7 @@ export default function BestSellers() {
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="mt-32 p-12 lg:p-24 relative overflow-hidden rounded-[4rem] bg-brand-card border border-white/5"
+          className="mt-32 p-12 lg:p-24 relative overflow-hidden rounded-[4rem] bg-brand-card border border-brand-border"
         >
           <div className="relative z-10 grid lg:grid-cols-2 items-center gap-20">
             <div>
@@ -112,29 +112,29 @@ export default function BestSellers() {
                 <div className="h-[1px] w-12 bg-emerald-500" />
                 <span className="text-emerald-500 text-xs font-bold tracking-[0.3em] uppercase">R&D Laboratory</span>
               </motion.div>
-              <h2 className="text-4xl lg:text-7xl text-white mb-10 leading-tight">
+              <h2 className="text-4xl lg:text-7xl text-brand-text mb-10 leading-tight">
                 Your Formula, <br />
                 <span className="italic text-brand-primary">Scaled for Production.</span>
               </h2>
               <p className="text-brand-text-secondary text-lg leading-relaxed mb-12 max-w-xl">
                 Alcho's technical facility specializes in private label development and high-purity seasoning engineering for enterprise hospitality brands.
               </p>
-              <div className="flex flex-wrap gap-12 pt-8 border-t border-white/5">
+              <div className="flex flex-wrap gap-12 pt-8 border-t border-brand-border">
                 {[
                   { label: "DAILY OUTPUT", val: "250T" },
                   { label: "CUSTOM SKUS", val: "1.2K+" },
                   { label: "QUALITY STD", val: "FSSC" }
                 ].map(stat => (
                   <div key={stat.label}>
-                    <p className="text-white text-3xl font-serif font-bold text-brand-primary">{stat.val}</p>
+                    <p className="text-brand-text text-3xl font-serif font-bold text-brand-primary">{stat.val}</p>
                     <p className="text-[10px] uppercase tracking-widest text-brand-text-secondary font-bold mt-2 opacity-50">{stat.label}</p>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="bg-brand-surface p-12 rounded-[3rem] border border-white/5">
-               <h4 className="text-white text-2xl mb-4">Enterprise OEM</h4>
+            <div className="bg-brand-surface p-12 rounded-[3rem] border border-brand-border">
+               <h4 className="text-brand-text text-2xl mb-4">Enterprise OEM</h4>
                <p className="text-brand-text-secondary text-sm mb-10 leading-relaxed">
                  Leverage our manufacturing stack to launch your proprietary flavor profile with audited industrial traceability.
                </p>

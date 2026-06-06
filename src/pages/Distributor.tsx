@@ -7,6 +7,8 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Truck, Handshake, TrendingUp, ShieldCheck, Globe, ArrowRight } from 'lucide-react';
 import { SafeImage } from '../components/common/SafeImage';
+import { IMG } from '../assets/images';
+import DistributionNetwork from '../components/sections/DistributionNetwork';
 
 import SEO from '../components/common/SEO';
 
@@ -15,7 +17,7 @@ export default function Distributor() {
     <div className="pt-24 min-h-screen bg-brand-bg">
       <SEO title="Distributor Program" description="Join our nationwide network and bring Alcho's industrial flavor consistency to your regional market." />
       {/* Hero */}
-      <section className="py-24 px-6 text-center border-b border-white/5">
+      <section className="py-24 px-6 text-center border-b border-brand-border">
         <div className="max-w-4xl mx-auto space-y-8">
           <div className="inline-flex items-center gap-3 px-4 py-2 bg-brand-primary/10 border border-brand-primary/20 rounded-full">
             <Globe size={16} className="text-brand-primary" />
@@ -27,6 +29,8 @@ export default function Distributor() {
           </p>
         </div>
       </section>
+
+      <DistributionNetwork />
 
       {/* Why Join */}
       <section className="py-24 px-6">
@@ -49,11 +53,11 @@ export default function Distributor() {
                 desc: "Tier-1 supply chain management ensures your stock is always replenished and never stagnant." 
               }
             ].map((p, i) => (
-              <div key={i} className="p-10 bg-brand-surface rounded-[3rem] border border-white/5 space-y-6">
+              <div key={i} className="p-10 bg-brand-surface rounded-[3rem] border border-brand-border space-y-6">
                 <div className="w-16 h-16 bg-brand-primary/10 rounded-2xl flex items-center justify-center text-brand-primary mb-4">
                   {p.icon}
                 </div>
-                <h3 className="text-2xl font-bold text-white">{p.title}</h3>
+                <h3 className="text-2xl font-bold text-brand-text">{p.title}</h3>
                 <p className="text-brand-text-secondary leading-relaxed">{p.desc}</p>
               </div>
             ))}
@@ -62,10 +66,10 @@ export default function Distributor() {
       </section>
 
       {/* Requirement Map */}
-      <section className="py-24 bg-brand-surface border-t border-white/5">
+      <section className="py-24 bg-brand-surface border-t border-brand-border">
          <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
             <div className="rounded-[4rem] overflow-hidden aspect-square relative">
-               <SafeImage src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1200" alt="Warehouse" className="w-full h-full" />
+               <SafeImage src={IMG.factory} alt="Distribution warehouse and logistics" className="w-full h-full" />
                <div className="absolute inset-0 bg-brand-primary/10 mix-blend-overlay" />
             </div>
             <div className="space-y-10">

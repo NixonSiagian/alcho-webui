@@ -40,7 +40,7 @@ export default function OEM() {
             viewport={{ once: true }}
           >
             <span className="text-brand-yellow text-xs uppercase font-black tracking-[0.6em] mb-8 block">PRIVATE LABEL INFRASTRUCTURE</span>
-            <h2 className="text-white text-5xl lg:text-8xl font-serif font-black mb-10 leading-none">
+            <h2 className="text-brand-text text-5xl lg:text-8xl font-serif font-black mb-10 leading-none">
               OEM <br />
               <span className="italic text-brand-yellow">Excellence.</span>
             </h2>
@@ -60,10 +60,10 @@ export default function OEM() {
                  initial={{ opacity: 0, y: 20 }}
                  whileInView={{ opacity: 1, y: 0 }}
                  transition={{ delay: i * 0.1 }}
-                 className="p-10 bg-white/5 border border-white/10 rounded-3xl hover:border-brand-yellow/30 transition-all"
+                 className="p-10 bg-brand-fill border border-brand-border-strong rounded-3xl hover:border-brand-yellow/30 transition-all"
                >
                   <cap.icon className="text-brand-yellow mb-8" size={32} />
-                  <h4 className="text-white text-xl font-serif font-black mb-4">{cap.title}</h4>
+                  <h4 className="text-brand-text text-xl font-serif font-black mb-4">{cap.title}</h4>
                   <p className="text-gray-500 text-sm leading-relaxed">{cap.desc}</p>
                </motion.div>
              ))}
@@ -72,7 +72,7 @@ export default function OEM() {
 
         <div className="p-12 lg:p-20 bg-brand-maroon/20 rounded-[3rem] border border-brand-yellow/10 flex flex-col lg:flex-row items-center justify-between gap-12">
            <div className="max-w-2xl text-center lg:text-left">
-              <h3 className="text-white text-3xl font-serif font-black mb-6">Ready to lead your own brand?</h3>
+              <h3 className="text-brand-text text-3xl font-serif font-black mb-6">Ready to lead your own brand?</h3>
               <p className="text-gray-400 text-lg font-medium">Schedule a technical consultation with our R&D director to discuss your proprietary profile requirements.</p>
            </div>
            <button className="whitespace-nowrap px-12 py-7 border-2 border-brand-yellow text-brand-yellow rounded-full font-serif font-black uppercase tracking-[0.2em] text-sm hover:bg-brand-yellow hover:text-brand-maroon transition-all">

@@ -46,7 +46,7 @@ export default function Resources() {
             >
               TECHNICAL REPOSITORY
             </motion.span>
-            <h2 className="text-white text-5xl lg:text-8xl font-serif font-black mb-0 leading-none">
+            <h2 className="text-brand-text text-5xl lg:text-8xl font-serif font-black mb-0 leading-none">
               Resource <br />
               <span className="italic text-brand-yellow">Center.</span>
             </h2>
@@ -63,7 +63,7 @@ export default function Resources() {
                initial={{ opacity: 0, y: 20 }}
                whileInView={{ opacity: 1, y: 0 }}
                transition={{ delay: i * 0.1 }}
-               className="group p-10 bg-white/5 border border-white/5 rounded-[2rem] hover:border-brand-yellow/30 transition-all duration-700 flex flex-col sm:flex-row items-start gap-10"
+               className="group p-10 bg-brand-fill border border-brand-border rounded-[2rem] hover:border-brand-yellow/30 transition-all duration-700 flex flex-col sm:flex-row items-start gap-10"
              >
                 <div className="w-20 h-20 bg-brand-yellow/5 rounded-2xl flex items-center justify-center text-brand-yellow flex-shrink-0 group-hover:bg-brand-yellow group-hover:text-brand-maroon transition-all duration-500">
                    <res.icon size={32} />
@@ -73,9 +73,9 @@ export default function Resources() {
                       <span className="text-[9px] uppercase font-black tracking-widest text-brand-yellow/60">{res.type}</span>
                       <Download size={18} className="text-gray-600 group-hover:text-brand-yellow transition-colors" />
                    </div>
-                   <h3 className="text-white text-2xl font-serif font-black mb-4">{res.title}</h3>
+                   <h3 className="text-brand-text text-2xl font-serif font-black mb-4">{res.title}</h3>
                    <p className="text-gray-500 text-sm leading-relaxed mb-8">{res.desc}</p>
-                   <button className="flex items-center gap-3 text-white text-[10px] uppercase font-black tracking-[0.4em] hover:gap-6 transition-all">
+                   <button className="flex items-center gap-3 text-brand-text text-[10px] uppercase font-black tracking-[0.4em] hover:gap-6 transition-all">
                       Download File <ChevronRight size={14} className="text-brand-yellow" />
                    </button>
                 </div>
@@ -88,7 +88,7 @@ export default function Resources() {
                <h3 className="text-4xl font-serif font-black mb-6">Need printed copies?</h3>
                <p className="font-bold leading-relaxed">Our regional sales representatives can provide high-quality physical brochures and product swatches for your procurement team.</p>
             </div>
-            <button className="px-12 py-7 bg-brand-maroon text-white rounded-sm font-serif font-black uppercase tracking-widest text-sm hover:translate-y-[-4px] transition-all shadow-2xl">
+            <button className="px-12 py-7 bg-brand-maroon text-brand-text rounded-sm font-serif font-black uppercase tracking-widest text-sm hover:translate-y-[-4px] transition-all shadow-2xl">
                Request Physical Kits
             </button>
         </div>

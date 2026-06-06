@@ -33,13 +33,13 @@ export default function About() {
               <span className="text-brand-primary text-xs font-bold tracking-[0.3em] uppercase">Core Infrastructure</span>
             </motion.div>
             
-            <h2 className="text-white mb-10">
+            <h2 className="text-brand-text mb-10">
               Pioneering <br />
               <span className="italic text-brand-primary">Flavor Intelligence.</span>
             </h2>
             
             <p className="text-brand-text-secondary text-xl leading-relaxed mb-10 max-w-xl">
-              Alcho Food Indonesia was founded on a singular premise: that <span className="text-white">industrial-scale production</span> deserves the same molecular precision found in professional flavor laboratories.
+              Alcho Food Indonesia was founded on a singular premise: that <span className="text-brand-text">industrial-scale production</span> deserves the same molecular precision found in professional flavor laboratories.
             </p>
             <p className="text-brand-text-secondary text-lg leading-relaxed mb-12">
               Today, our Tangerang-based facility processes over 50 metric tons of custom-blended substrates monthly, serving enterprise HORECA and multi-national food processors.
@@ -62,12 +62,12 @@ export default function About() {
                  initial={{ opacity: 0, y: 20 }}
                  whileInView={{ opacity: 1, y: 0 }}
                  transition={{ delay: i * 0.1 }}
-                 className="p-10 bg-brand-surface border border-white/5 rounded-[2.5rem] flex flex-col items-start gap-6 group hover:border-brand-primary/30 transition-all cursor-default"
+                 className="p-10 bg-brand-surface border border-brand-border rounded-[2.5rem] flex flex-col items-start gap-6 group hover:border-brand-primary/30 transition-all cursor-default"
                >
-                  <div className="w-12 h-12 rounded-2xl bg-brand-bg border border-white/5 flex items-center justify-center group-hover:bg-brand-primary/10 transition-colors">
+                  <div className="w-12 h-12 rounded-2xl bg-brand-bg border border-brand-border flex items-center justify-center group-hover:bg-brand-primary/10 transition-colors">
                      <feature.icon className="text-brand-primary" size={24} />
                   </div>
-                  <h4 className="text-white text-xl font-bold">{feature.title}</h4>
+                  <h4 className="text-brand-text text-xl font-bold">{feature.title}</h4>
                   <p className="text-brand-text-secondary text-sm leading-relaxed">{feature.desc}</p>
                </motion.div>
              ))}
@@ -75,11 +75,11 @@ export default function About() {
         </div>
 
         {/* Timeline (Roadmap Style) */}
-        <div className="relative pt-32 border-t border-white/5">
+        <div className="relative pt-32 border-t border-brand-border">
            <div className="flex justify-between items-center mb-24">
              <div className="flex items-center gap-4">
                <History size={18} className="text-brand-primary" />
-               <h3 className="text-white text-xs uppercase tracking-[0.5em] font-bold">Industrial Roadmap</h3>
+               <h3 className="text-brand-text text-xs uppercase tracking-[0.5em] font-bold">Industrial Roadmap</h3>
              </div>
              <span className="text-brand-primary font-mono text-[10px] font-bold uppercase tracking-[0.2em] bg-brand-primary/5 px-4 py-2 rounded-full border border-brand-primary/20">Operational for 18+ Years</span>
            </div>
@@ -95,10 +95,10 @@ export default function About() {
                >
                   <div className="mb-8 flex items-end gap-3">
                     <span className="text-5xl font-serif font-black text-brand-surface group-hover:text-brand-primary/20 transition-colors drop-shadow-sm">{milestone.year}</span>
-                    <div className="h-[1px] flex-1 bg-white/5 mb-4 group-hover:bg-brand-primary/20 transition-colors" />
+                    <div className="h-[1px] flex-1 bg-brand-fill mb-4 group-hover:bg-brand-primary/20 transition-colors" />
                   </div>
-                  <h4 className="text-white text-sm font-bold uppercase tracking-widest mb-4">{milestone.title}</h4>
-                  <p className="text-brand-text-secondary text-xs leading-relaxed group-hover:text-white transition-colors">{milestone.description}</p>
+                  <h4 className="text-brand-text text-sm font-bold uppercase tracking-widest mb-4">{milestone.title}</h4>
+                  <p className="text-brand-text-secondary text-xs leading-relaxed group-hover:text-brand-text transition-colors">{milestone.description}</p>
                </motion.div>
              ))}
            </div>

@@ -1,0 +1,21 @@
+ALCHO FOODS — HALAL CERTIFICATE (MUI)
+PT. NEW ALFA OMEGA UTAMA
+====================================================================
+
+CERTIFICATION : HALAL — Majelis Ulama Indonesia (MUI)
+SCOPE         : Alcho Foods seasoning, bouillon, sauce and snack range
+STATUS        : Active
+
+All products in the Alcho Foods HORECA catalog are produced under a
+HALAL-certified manufacturing system. The official, stamped certificate
+(with certificate number and validity dates) is available on authorized
+request for audits and onboarding.
+
+CONTACT
+Quality Control Department
+Phone 031 866 8858 — WhatsApp 0812 4918 6623
+
+--------------------------------------------------------------------
+Digital placeholder. Replace with the scanned official HALAL MUI
+certificate (PDF) in /public/resources/ and update manifest.json
+(no code changes required).

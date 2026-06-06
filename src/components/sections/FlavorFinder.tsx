@@ -53,7 +53,7 @@ export default function FlavorFinder() {
     <>
       <button 
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-8 right-8 z-50 bg-brand-primary text-brand-bg px-8 py-4 rounded-full font-black uppercase tracking-widest shadow-2xl hover:scale-105 transition-all flex items-center gap-3 active:scale-95"
+        className="fixed bottom-8 right-8 z-50 bg-brand-primary text-brand-text px-8 py-4 rounded-full font-black uppercase tracking-widest shadow-2xl hover:scale-105 transition-all flex items-center gap-3 active:scale-95"
       >
         <Zap size={20} fill="currentColor" />
         Flavor Finder
@@ -74,11 +74,11 @@ export default function FlavorFinder() {
               initial={{ opacity: 0, scale: 0.9, y: 40 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 40 }}
-              className="relative w-full max-w-2xl bg-brand-card border border-white/10 rounded-[3rem] p-12 overflow-hidden shadow-2xl"
+              className="relative w-full max-w-2xl bg-brand-card border border-brand-border-strong rounded-[3rem] p-12 overflow-hidden shadow-2xl"
             >
               <button 
                 onClick={reset}
-                className="absolute top-8 right-8 text-white/40 hover:text-white transition-colors"
+                className="absolute top-8 right-8 text-brand-text-secondary hover:text-brand-text transition-colors"
               >
                 <X size={24} />
               </button>
@@ -87,7 +87,7 @@ export default function FlavorFinder() {
                 <div className="space-y-12">
                   <div>
                     <p className="text-brand-primary text-[10px] uppercase font-bold tracking-[0.4em] mb-4">Step {step + 1} of {FLAVOR_QUESTIONS.length}</p>
-                    <h2 className="text-white text-3xl font-black uppercase">{FLAVOR_QUESTIONS[step].question}</h2>
+                    <h2 className="text-brand-text text-3xl font-black uppercase">{FLAVOR_QUESTIONS[step].question}</h2>
                   </div>
 
                   <div className="grid gap-4">
@@ -95,7 +95,7 @@ export default function FlavorFinder() {
                       <button
                         key={i}
                         onClick={() => handleAnswer(opt)}
-                        className="w-full p-6 text-left bg-white/5 border border-white/10 rounded-2xl text-white font-bold hover:bg-brand-primary/10 hover:border-brand-primary/30 transition-all flex items-center justify-between group"
+                        className="w-full p-6 text-left bg-brand-fill border border-brand-border-strong rounded-2xl text-brand-text font-bold hover:bg-brand-primary/10 hover:border-brand-primary/30 transition-all flex items-center justify-between group"
                       >
                         {opt}
                         <ChevronRight size={18} className="opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -109,8 +109,8 @@ export default function FlavorFinder() {
                     <ChefHat size={48} />
                   </div>
                   <div>
-                    <h2 className="text-white text-4xl font-black uppercase mb-4">Flavor Profile Matched.</h2>
-                    <p className="text-brand-text-secondary">Based on your requirement for <span className="text-white font-bold">{answers[1]}</span> in <span className="text-white font-bold">{answers[0]}</span>, we have several industrial SKU benchmarks ready.</p>
+                    <h2 className="text-brand-text text-4xl font-black uppercase mb-4">Flavor Profile Matched.</h2>
+                    <p className="text-brand-text-secondary">Based on your requirement for <span className="text-brand-text font-bold">{answers[1]}</span> in <span className="text-brand-text font-bold">{answers[0]}</span>, we have several industrial SKU benchmarks ready.</p>
                   </div>
                   
                   <div className="flex flex-col gap-4">
@@ -123,7 +123,7 @@ export default function FlavorFinder() {
                     </Link>
                     <button 
                       onClick={reset}
-                      className="text-brand-text-secondary text-sm font-bold uppercase tracking-widest hover:text-white transition-colors"
+                      className="text-brand-text-secondary text-sm font-bold uppercase tracking-widest hover:text-brand-text transition-colors"
                     >
                       Restart Discovery
                     </button>

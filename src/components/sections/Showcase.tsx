@@ -5,15 +5,18 @@
 
 import { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Search, ChevronRight, ShoppingBag, CheckCircle2 } from 'lucide-react';
+import { Search, ChevronRight, ShoppingBag, CheckCircle2, Download } from 'lucide-react';
 import { PRODUCTS, CATEGORIES } from '../../data/products';
 import { cn } from '../../lib/utils';
 import { SafeImage } from '../common/SafeImage';
 import { Link } from 'react-router-dom';
+import { useResourceManifest, getPriceListDocument, downloadResource } from '../../lib/resources';
 
 export default function FeaturedShowcase() {
   const [activeCategory, setActiveCategory] = useState<string>("All");
   const [searchQuery, setSearchQuery] = useState("");
+  const { manifest } = useResourceManifest();
+  const priceListDoc = getPriceListDocument(manifest);
 
   const filteredProducts = useMemo(() => {
     return PRODUCTS.filter(p => {
@@ -37,7 +40,7 @@ export default function FeaturedShowcase() {
                     <div className="h-[1px] w-12 bg-brand-primary" />
                     <span className="text-brand-primary text-xs font-bold tracking-[0.4em] uppercase">Official Catalog</span>
                 </motion.div>
-                <h2 className="text-white text-5xl md:text-8xl mb-8">Solution <span className="italic text-brand-primary">Systems.</span></h2>
+                <h2 className="text-brand-text text-5xl md:text-8xl mb-8">Solution <span className="italic text-brand-primary">Systems.</span></h2>
                 <p className="text-brand-text-secondary text-xl max-w-2xl leading-relaxed">
                   From traditional Indonesian sauces to high-stability snack seasonings, our portfolio is engineered for HORECA and food industry leaders.
                 </p>
@@ -46,7 +49,7 @@ export default function FeaturedShowcase() {
 
         {/* Filters & Search */}
         <div className="mb-16 space-y-8">
-          <div className="flex flex-col md:flex-row gap-6 items-center justify-between border-b border-white/5 pb-8">
+          <div className="flex flex-col md:flex-row gap-6 items-center justify-between border-b border-brand-border pb-8">
             {/* Search */}
             <div className="relative w-full md:w-96">
                <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-brand-text-secondary" size={20} />
@@ -55,7 +58,7 @@ export default function FeaturedShowcase() {
                  placeholder="Search by product name or code..."
                  value={searchQuery}
                  onChange={(e) => setSearchQuery(e.target.value)}
-                 className="w-full bg-brand-surface/50 border border-white/5 rounded-2xl py-4 pl-12 pr-6 text-white focus:outline-none focus:border-brand-primary/50 transition-colors"
+                 className="w-full bg-brand-surface/50 border border-brand-border rounded-2xl py-4 pl-12 pr-6 text-brand-text focus:outline-none focus:border-brand-primary/50 transition-colors"
                />
             </div>
 
@@ -65,7 +68,7 @@ export default function FeaturedShowcase() {
                  onClick={() => setActiveCategory("All")}
                  className={cn(
                    "px-6 py-3 rounded-full text-xs font-bold uppercase tracking-widest transition-all",
-                   activeCategory === "All" ? "bg-brand-primary text-brand-bg" : "bg-white/5 text-brand-text-secondary hover:bg-white/10"
+                   activeCategory === "All" ? "bg-brand-primary text-brand-text" : "bg-brand-fill text-brand-text-secondary hover:bg-brand-border-strong"
                  )}
                >
                  All Products
@@ -76,7 +79,7 @@ export default function FeaturedShowcase() {
                     onClick={() => setActiveCategory(cat)}
                     className={cn(
                       "px-6 py-3 rounded-full text-xs font-bold uppercase tracking-widest transition-all",
-                      activeCategory === cat ? "bg-brand-primary text-brand-bg" : "bg-white/5 text-brand-text-secondary hover:bg-white/10"
+                      activeCategory === cat ? "bg-brand-primary text-brand-text" : "bg-brand-fill text-brand-text-secondary hover:bg-brand-border-strong"
                     )}
                  >
                    {cat}
@@ -96,12 +99,12 @@ export default function FeaturedShowcase() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
-                className="group bg-brand-surface border border-white/5 rounded-[2.5rem] p-8 hover:border-brand-primary/30 transition-all duration-500 hover:-translate-y-2 flex flex-col h-full"
+                className="group bg-brand-surface border border-brand-border rounded-[2.5rem] p-8 hover:border-brand-primary/30 transition-all duration-500 hover:-translate-y-2 flex flex-col h-full"
               >
                 <div className="flex justify-between items-start mb-8">
                   <div className="space-y-1">
                     <span className="text-brand-primary font-mono text-xs tracking-widest">{product.code}</span>
-                    <h3 className="text-white text-2xl font-medium leading-tight group-hover:text-brand-primary transition-colors">{product.name}</h3>
+                    <h3 className="text-brand-text text-2xl font-medium leading-tight group-hover:text-brand-primary transition-colors">{product.name}</h3>
                   </div>
                   <div className="p-3 bg-brand-primary/10 rounded-2xl text-brand-primary group-hover:scale-110 transition-transform">
                     <ShoppingBag size={20} />
@@ -112,22 +115,37 @@ export default function FeaturedShowcase() {
                   {product.description} Engineered for consistency and high stability in industrial applications.
                 </p>
 
-                <div className="space-y-4 pt-8 border-t border-white/5">
+                <div className="space-y-4 pt-8 border-t border-brand-border">
                   <div className="flex flex-wrap gap-2 text-[10px] font-bold uppercase tracking-widest text-brand-text-secondary">
                     {product.sizes.map(size => (
-                      <span key={size} className="px-3 py-1 bg-white/5 rounded-md">{size}</span>
+                      <span key={size} className="px-3 py-1 bg-brand-fill rounded-md">{size}</span>
                     ))}
                   </div>
-                  <div className="flex items-center gap-2 text-emerald-500 text-[10px] font-bold uppercase tracking-widest">
+                  <div className="flex items-center gap-2 text-brand-accent text-[10px] font-bold uppercase tracking-widest">
                     <CheckCircle2 size={12} />
                     MUI HALAL CERTIFIED
                   </div>
                 </div>
 
-                <button className="mt-8 w-full py-4 rounded-2xl border border-white/10 text-white font-bold text-xs uppercase tracking-widest hover:bg-brand-primary hover:text-brand-bg transition-all flex items-center justify-center gap-2 group/btn">
-                  Technical Docs
-                  <ChevronRight size={16} className="group-hover/btn:translate-x-1 transition-transform" />
-                </button>
+                <div className="mt-8 flex flex-col gap-3">
+                  <button
+                    type="button"
+                    onClick={() => priceListDoc && downloadResource(priceListDoc, 'product_card')}
+                    disabled={!priceListDoc}
+                    aria-label={`Download price list for ${product.name}`}
+                    className="w-full py-4 rounded-2xl bg-brand-primary text-brand-text font-bold text-xs uppercase tracking-widest hover:bg-brand-secondary hover:text-white transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed group/dl"
+                  >
+                    Download Price List
+                    <Download size={16} className="group-hover/dl:translate-y-0.5 transition-transform" />
+                  </button>
+                  <Link
+                    to={`/products/${product.code}`}
+                    className="w-full py-4 rounded-2xl border border-brand-border-strong text-brand-text font-bold text-xs uppercase tracking-widest hover:bg-brand-fill transition-all flex items-center justify-center gap-2 group/btn"
+                  >
+                    Technical Docs
+                    <ChevronRight size={16} className="group-hover/btn:translate-x-1 transition-transform" />
+                  </Link>
+                </div>
               </motion.div>
             ))}
           </AnimatePresence>

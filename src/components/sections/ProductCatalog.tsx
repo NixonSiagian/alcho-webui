@@ -68,7 +68,7 @@ export default function ProductCatalog() {
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="text-white mb-8"
+              className="text-brand-text mb-8"
             >
               Explore Our <span className="text-brand-primary">Seasoning Engine.</span>
             </motion.h2>
@@ -84,10 +84,10 @@ export default function ProductCatalog() {
               placeholder="Search products or SKUs..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-brand-surface border border-white/5 rounded-2xl py-5 pl-14 pr-6 focus:border-brand-primary/30 focus:bg-brand-card outline-none transition-all placeholder:text-brand-text-secondary/30 text-sm font-medium"
+              className="w-full bg-brand-surface border border-brand-border rounded-2xl py-5 pl-14 pr-6 focus:border-brand-primary/30 focus:bg-brand-card outline-none transition-all placeholder:text-brand-text-secondary/30 text-sm font-medium"
             />
             {searchQuery && (
-              <button onClick={() => setSearchQuery('')} className="absolute right-5 top-1/2 -translate-y-1/2 text-brand-text-secondary hover:text-white">
+              <button onClick={() => setSearchQuery('')} className="absolute right-5 top-1/2 -translate-y-1/2 text-brand-text-secondary hover:text-brand-text">
                 <X size={16} />
               </button>
             )}
@@ -112,10 +112,10 @@ export default function ProductCatalog() {
                     onClick={() => setActiveCategory(cat)}
                     className="group text-left"
                   >
-                    <div className="bg-brand-surface border border-white/5 rounded-[2.5rem] p-10 h-full flex flex-col transition-all duration-500 group-hover:border-brand-primary/30 group-hover:bg-brand-card relative overflow-hidden">
+                    <div className="bg-brand-surface border border-brand-border rounded-[2.5rem] p-10 h-full flex flex-col transition-all duration-500 group-hover:border-brand-primary/30 group-hover:bg-brand-card relative overflow-hidden">
                       <div className={cn("absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-100 transition-opacity duration-700", meta.color)} />
                       <div className="relative z-10">
-                        <div className="w-16 h-16 rounded-2xl bg-brand-bg flex items-center justify-center mb-8 border border-white/5 group-hover:scale-110 transition-transform duration-500">
+                        <div className="w-16 h-16 rounded-2xl bg-brand-bg flex items-center justify-center mb-8 border border-brand-border group-hover:scale-110 transition-transform duration-500">
                           <meta.icon className="text-brand-primary" size={28} />
                         </div>
                         <h3 className="text-2xl mb-4 group-hover:text-brand-primary transition-colors">{cat}</h3>
@@ -143,7 +143,7 @@ export default function ProductCatalog() {
                 >
                   <ChevronLeft size={16} /> Back to Categories
                 </button>
-                <div className="h-4 w-[1px] bg-white/10" />
+                <div className="h-4 w-[1px] bg-brand-border-strong" />
                 <span className="text-xs uppercase font-bold tracking-widest text-brand-primary">
                   {showSearch ? `Search Results (${filteredProducts.length})` : activeCategory}
                 </span>
@@ -161,15 +161,15 @@ export default function ProductCatalog() {
                       className="modern-card group cursor-pointer"
                     >
                       <div className="flex justify-between items-start mb-8">
-                        <span className="font-mono text-[10px] bg-white/5 px-2 py-1 rounded text-brand-primary border border-white/5">
+                        <span className="font-mono text-[10px] bg-brand-fill px-2 py-1 rounded text-brand-primary border border-brand-border">
                           {p.code}
                         </span>
                         {p.halal && <ShieldCheck className="text-emerald-500/50" size={16} />}
                       </div>
-                      <h4 className="text-white text-xl font-serif font-bold mb-4 group-hover:text-brand-primary transition-colors">{p.name}</h4>
+                      <h4 className="text-brand-text text-xl font-serif font-bold mb-4 group-hover:text-brand-primary transition-colors">{p.name}</h4>
                       <p className="text-xs line-clamp-2 mb-10 leading-relaxed">{p.description}</p>
                       
-                      <div className="flex items-center justify-between pt-6 border-t border-white/5">
+                      <div className="flex items-center justify-between pt-6 border-t border-brand-border">
                         <span className="text-[10px] uppercase font-bold tracking-widest text-brand-text-secondary/50">Details & Specs</span>
                         <ArrowRight size={16} className="text-brand-primary opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
                       </div>
@@ -178,7 +178,7 @@ export default function ProductCatalog() {
                 </div>
               ) : (
                 <div className="py-24 text-center">
-                  <Search size={48} className="mx-auto text-white/5 mb-8" />
+                  <Search size={48} className="mx-auto text-brand-text/10 mb-8" />
                   <h3 className="text-xl mb-4">No industrial profiles matched your query.</h3>
                   <button onClick={() => setSearchQuery('')} className="text-brand-primary font-bold hover:underline">Clear search filters</button>
                 </div>
@@ -191,7 +191,7 @@ export default function ProductCatalog() {
         <motion.div 
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="mt-32 p-12 lg:p-20 bg-brand-surface border border-white/5 rounded-[3rem] relative overflow-hidden"
+          className="mt-32 p-12 lg:p-20 bg-brand-surface border border-brand-border rounded-[3rem] relative overflow-hidden"
         >
           <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12">
             <div className="max-w-2xl text-center lg:text-left">
@@ -225,17 +225,17 @@ export default function ProductCatalog() {
                 initial={{ opacity: 0, scale: 0.95, y: 20 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95, y: 20 }}
-                className="w-full max-w-6xl bg-brand-surface border border-white/10 rounded-[3rem] shadow-2xl relative flex flex-col lg:flex-row overflow-hidden max-h-[90vh]"
+                className="w-full max-w-6xl bg-brand-surface border border-brand-border-strong rounded-[3rem] shadow-2xl relative flex flex-col lg:flex-row overflow-hidden max-h-[90vh]"
                 onClick={(e) => e.stopPropagation()}
               >
                 <button 
                   onClick={() => setSelectedProduct(null)}
-                  className="absolute top-8 right-8 z-50 p-4 bg-brand-bg/50 rounded-full text-white hover:bg-brand-primary transition-all"
+                  className="absolute top-8 right-8 z-50 p-4 bg-brand-bg/50 rounded-full text-brand-text hover:bg-brand-primary transition-all"
                 >
                   <X size={24} />
                 </button>
 
-                <div className="lg:w-2/5 bg-brand-card p-12 border-r border-white/5 flex flex-col">
+                <div className="lg:w-2/5 bg-brand-card p-12 border-r border-brand-border flex flex-col">
                   <div className="mb-12">
                     <span className="font-mono text-xs bg-brand-primary/10 text-brand-primary px-3 py-1.5 rounded border border-brand-primary/20 uppercase font-bold tracking-widest">
                        {selectedProduct.code}
@@ -252,11 +252,11 @@ export default function ProductCatalog() {
                     "{selectedProduct.description}"
                   </p>
 
-                  <div className="mt-auto pt-10 border-t border-white/5">
+                  <div className="mt-auto pt-10 border-t border-brand-border">
                     <h5 className="text-[10px] uppercase font-bold tracking-[0.3em] text-brand-text-secondary/50 mb-6 font-mono">Standard Packaging SKUs</h5>
                     <div className="space-y-3">
                       {selectedProduct.sizes.map(size => (
-                        <div key={size} className="flex items-center justify-between p-4 bg-brand-bg/50 border border-white/5 rounded-xl group hover:border-brand-primary/20 transition-all">
+                        <div key={size} className="flex items-center justify-between p-4 bg-brand-bg/50 border border-brand-border rounded-xl group hover:border-brand-primary/20 transition-all">
                           <span className="text-sm font-bold">{size}</span>
                           <Check size={14} className="text-brand-primary opacity-0 group-hover:opacity-100" />
                         </div>
@@ -280,7 +280,7 @@ export default function ProductCatalog() {
                          </ul>
                        </div>
                        
-                       <div className="p-8 bg-brand-bg/30 border border-white/5 rounded-2xl">
+                       <div className="p-8 bg-brand-bg/30 border border-brand-border rounded-2xl">
                           <h5 className="text-[10px] uppercase font-bold tracking-[0.3em] text-brand-text-secondary mb-4 font-mono">Storage Specifications</h5>
                           <p className="text-xs leading-relaxed">Keep in cool, dry conditions away from direct sunlight. Shelf life of 12 months under recommended storage.</p>
                        </div>
@@ -294,7 +294,7 @@ export default function ProductCatalog() {
                                 <ShieldCheck className="text-emerald-600" />
                              </div>
                              <div>
-                                <span className="block text-xs font-bold text-white">MUI Halal Certified</span>
+                                <span className="block text-xs font-bold text-brand-text">MUI Halal Certified</span>
                                 <span className="block text-[9px] text-emerald-500 font-mono tracking-widest uppercase">Verified 2026</span>
                              </div>
                           </div>
@@ -303,7 +303,7 @@ export default function ProductCatalog() {
                                 <Check className="text-emerald-600" />
                              </div>
                              <div>
-                                <span className="block text-xs font-bold text-white">FSSC 22000</span>
+                                <span className="block text-xs font-bold text-brand-text">FSSC 22000</span>
                                 <span className="block text-[9px] text-emerald-500 font-mono tracking-widest uppercase">Food Safety Standard</span>
                              </div>
                           </div>

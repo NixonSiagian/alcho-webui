@@ -6,16 +6,17 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { SafeImage } from '../components/common/SafeImage';
+import { IMG } from '../assets/images';
 
 const GALLERY_ITEMS = [
-  { url: "https://images.unsplash.com/photo-1549590143-d5855148a9d5?q=80&w=1200", title: "Raw Spices", category: "Source" },
-  { url: "https://images.unsplash.com/photo-1590089415225-401ed6f9db8e?q=80&w=1200", title: "Milling Facility", category: "Production" },
-  { url: "https://images.unsplash.com/photo-1615484477778-ca3b77940c25?q=80&w=1200", title: "Blending Unit", category: "Production" },
-  { url: "https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200", title: "Laboratory Check", category: "Quality" },
-  { url: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200", title: "Plated Excellence", category: "Culinary" },
-  { url: "https://images.unsplash.com/photo-1596797038530-2c39fa81b487?q=80&w=1200", title: "Bakso Presentation", category: "Culinary" },
-  { url: "https://images.unsplash.com/photo-1560611580-b9f0d7f688a2?q=80&w=1200", title: "Warehouse Scale", category: "Logistics" },
-  { url: "https://images.unsplash.com/photo-1506368249639-73a05d6f6488?q=80&w=1200", title: "Fresh Aromatics", category: "Source" }
+  { url: IMG.product, title: "Signature Seasoning", category: "Product" },
+  { url: IMG.factory, title: "Manufacturing Line", category: "Production" },
+  { url: IMG.lab, title: "Flavor Laboratory", category: "Quality" },
+  { url: IMG.chef, title: "Chef Application", category: "Culinary" },
+  { url: IMG.hero, title: "Studio Product Shot", category: "Product" },
+  { url: IMG.factory, title: "Industrial Capacity", category: "Logistics" },
+  { url: IMG.lab, title: "Quality Control", category: "Quality" },
+  { url: IMG.chef, title: "Plated Excellence", category: "Culinary" }
 ];
 
 import SEO from '../components/common/SEO';
@@ -37,10 +38,10 @@ export default function Gallery() {
                initial={{ opacity: 0, y: 20 }}
                whileInView={{ opacity: 1, y: 0 }}
                transition={{ delay: i * 0.05 }}
-               className="group relative overflow-hidden rounded-[2rem] break-inside-avoid bg-brand-surface border border-white/5"
+               className="group relative overflow-hidden rounded-[2rem] break-inside-avoid bg-brand-surface border border-brand-border"
              >
                 <SafeImage src={item.url} alt={item.title} className="w-full group-hover:scale-105 transition-transform duration-700" />
-                <div className="absolute inset-0 bg-gradient-to-t from-brand-bg via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-8 flex flex-col justify-end">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-8 flex flex-col justify-end">
                    <p className="text-[10px] uppercase font-bold tracking-widest text-brand-primary mb-2">{item.category}</p>
                    <p className="text-white text-xl font-bold">{item.title}</p>
                 </div>

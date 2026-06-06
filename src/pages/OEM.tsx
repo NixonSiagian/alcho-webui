@@ -8,6 +8,7 @@ import { motion } from 'motion/react';
 import { Factory, ShieldCheck, PenTool, Zap, ArrowRight, Package } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { SafeImage } from '../components/common/SafeImage';
+import { IMG } from '../assets/images';
 
 import SEO from '../components/common/SEO';
 
@@ -18,7 +19,7 @@ export default function OEM() {
       {/* Hero */}
       <section className="py-24 px-6 relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-40">
-           <SafeImage src="/src/assets/images/alcho_factory_interior_1780645061770.png" alt="Factory" className="w-full h-full" />
+           <SafeImage src={IMG.factory} alt="Factory" className="w-full h-full" />
            <div className="absolute inset-0 bg-gradient-to-t from-brand-bg via-transparent to-brand-bg" />
         </div>
         <div className="max-w-7xl mx-auto relative z-10 text-center py-24">
@@ -57,11 +58,11 @@ export default function OEM() {
                desc: "Rigorous testing and batch retention samples ensure every unit matches your specification." 
              }
            ].map((c, i) => (
-             <div key={i} className="p-12 bg-brand-card rounded-[3rem] border border-white/5 hover:border-brand-primary/30 transition-all group">
+             <div key={i} className="p-12 bg-brand-card rounded-[3rem] border border-brand-border hover:border-brand-primary/30 transition-all group">
                 <div className="w-16 h-16 bg-brand-primary/10 rounded-2xl flex items-center justify-center text-brand-primary mb-8 group-hover:scale-110 transition-transform">
                    {c.icon}
                 </div>
-                <h3 className="text-white text-2xl font-bold mb-6">{c.title}</h3>
+                <h3 className="text-brand-text text-2xl font-bold mb-6">{c.title}</h3>
                 <p className="text-brand-text-secondary leading-relaxed">{c.desc}</p>
              </div>
            ))}
@@ -83,10 +84,10 @@ export default function OEM() {
                 { step: "04", val: "Delivery", desc: "Secure packaging and nationwide logistics." }
               ].map((s, i) => (
                 <div key={i} className="relative p-8 text-center space-y-4">
-                   <p className="text-6xl font-black text-white/5 absolute -top-4 left-1/2 -translate-x-1/2 z-0">{s.step}</p>
+                   <p className="text-6xl font-black text-brand-text/10 absolute -top-4 left-1/2 -translate-x-1/2 z-0">{s.step}</p>
                    <p className="text-brand-primary font-bold text-xl relative z-10">{s.val}</p>
                    <p className="text-brand-text-secondary text-sm relative z-10">{s.desc}</p>
-                   {i < 3 && <div className="hidden md:block absolute top-1/2 -right-4 w-8 h-[1px] bg-white/10" />}
+                   {i < 3 && <div className="hidden md:block absolute top-1/2 -right-4 w-8 h-[1px] bg-brand-border-strong" />}
                 </div>
               ))}
            </div>

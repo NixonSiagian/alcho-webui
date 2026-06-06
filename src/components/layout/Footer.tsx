@@ -35,7 +35,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-brand-bg pt-24 pb-16 border-t border-white/5 relative z-10 overflow-hidden">
+    <footer className="bg-brand-bg pt-24 pb-16 border-t border-brand-border relative z-10 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 mb-24">
           
@@ -72,7 +72,7 @@ export default function Footer() {
           <div className="lg:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-12">
             {Object.entries(FOOTER_LINKS).map(([title, links]) => (
               <div key={title}>
-                <h4 className="text-white text-[10px] uppercase tracking-[0.3em] font-bold mb-8 opacity-50">{title}</h4>
+                <h4 className="text-brand-text text-[10px] uppercase tracking-[0.3em] font-bold mb-8 opacity-50">{title}</h4>
                 <ul className="space-y-4">
                   {links.map((link) => (
                     <li key={link.name}>
@@ -87,14 +87,14 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-10 bg-brand-surface rounded-[2.5rem] border border-white/5 mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-10 bg-brand-surface rounded-[2.5rem] border border-brand-border mb-24">
           <div className="flex items-center gap-5">
             <div className="w-12 h-12 rounded-xl bg-brand-bg flex items-center justify-center text-brand-primary">
               <MapPin size={20} />
             </div>
             <div>
               <p className="text-[10px] uppercase font-bold tracking-widest text-brand-text-secondary opacity-50">HQ Base</p>
-              <p className="text-white text-xs font-bold leading-relaxed">Sidoarjo, Indonesia</p>
+              <p className="text-brand-text text-xs font-bold leading-relaxed">Sidoarjo, Indonesia</p>
             </div>
           </div>
           <div className="flex items-center gap-5">
@@ -103,7 +103,7 @@ export default function Footer() {
             </div>
             <div>
               <p className="text-[10px] uppercase font-bold tracking-widest text-brand-text-secondary opacity-50">Office</p>
-              <p className="text-white text-xs font-bold leading-relaxed">031 866 8858</p>
+              <p className="text-brand-text text-xs font-bold leading-relaxed">031 866 8858</p>
             </div>
           </div>
           <div className="flex items-center gap-5">
@@ -112,19 +112,19 @@ export default function Footer() {
             </div>
             <div>
               <p className="text-[10px] uppercase font-bold tracking-widest text-brand-text-secondary opacity-50">WhatsApp</p>
-              <p className="text-white text-xs font-bold leading-relaxed">0812 4918 6623</p>
+              <p className="text-brand-text text-xs font-bold leading-relaxed">0812 4918 6623</p>
             </div>
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-center gap-8 pt-8 border-t border-white/5">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-8 pt-8 border-t border-brand-border">
            <p className="text-brand-text-secondary text-[10px] uppercase tracking-[0.2em] font-bold">
              &copy; {new Date().getFullYear()} PT. NEW ALFA OMEGA UTAMA. FSSC 22000 & MUI HALAL.
            </p>
            
            <button 
              onClick={scrollToTop}
-             className="flex items-center gap-3 text-brand-text-secondary hover:text-white transition-all text-[10px] uppercase font-bold tracking-widest group"
+             className="flex items-center gap-3 text-brand-text-secondary hover:text-brand-text transition-all text-[10px] uppercase font-bold tracking-widest group"
            >
              Back to Top <ArrowUp size={14} className="group-hover:-translate-y-1 transition-transform" />
            </button>

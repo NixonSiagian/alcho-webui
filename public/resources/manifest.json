@@ -1,0 +1,123 @@
+{
+  "version": "2026.05",
+  "updated": "2026-05-06",
+  "categories": [
+    {
+      "id": "product-catalog",
+      "title": "Product Catalog",
+      "description": "Browse the full Alcho Foods range and corporate overview.",
+      "icon": "BookOpen",
+      "documents": [
+        {
+          "id": "product-catalog-2026",
+          "title": "Alcho Foods Product Catalog 2026",
+          "description": "Complete HORECA range with product codes, categories and available pack sizes.",
+          "file": "/resources/alcho-product-catalog-2026.csv",
+          "fileType": "CSV",
+          "fileSize": "3.5 KB",
+          "updated": "2026-05-06",
+          "featured": true
+        },
+        {
+          "id": "company-profile-2026",
+          "title": "Company Profile 2026",
+          "description": "Who we are, what we manufacture, and our quality commitments since 2008.",
+          "file": "/resources/alcho-company-profile-2026.txt",
+          "fileType": "TXT",
+          "fileSize": "1.4 KB",
+          "updated": "2026-05-06"
+        }
+      ]
+    },
+    {
+      "id": "price-list",
+      "title": "Price List",
+      "description": "Latest HORECA pricing per piece and per box. Prices exclude PPN 11%.",
+      "icon": "Tag",
+      "documents": [
+        {
+          "id": "pricelist-horeca-2026",
+          "title": "HORECA Price List 2026",
+          "description": "Per-piece and per-box pricing across all sauces, bouillon and snack seasonings.",
+          "file": "/resources/alcho-pricelist-horeca-2026.csv",
+          "fileType": "CSV",
+          "fileSize": "5.5 KB",
+          "updated": "2026-05-06",
+          "featured": true,
+          "priceList": true
+        }
+      ]
+    },
+    {
+      "id": "technical",
+      "title": "Technical Documents",
+      "description": "Specifications and implementation guides for industrial use.",
+      "icon": "FileText",
+      "documents": [
+        {
+          "id": "tds-2026",
+          "title": "Technical Data Sheet (TDS)",
+          "description": "Ingredient composition, nutritional analysis and usage specifications.",
+          "file": "/resources/alcho-technical-data-sheet-2026.txt",
+          "fileType": "TXT",
+          "fileSize": "1.1 KB",
+          "updated": "2026-05-06"
+        },
+        {
+          "id": "sds-2026",
+          "title": "Safety Data Sheet (SDS)",
+          "description": "Handling and storage safety specifications for factory environments.",
+          "file": "/resources/alcho-safety-data-sheet-2026.txt",
+          "fileType": "TXT",
+          "fileSize": "1.1 KB",
+          "updated": "2026-05-06"
+        },
+        {
+          "id": "oem-guide-2026",
+          "title": "OEM Implementation Guide",
+          "description": "Full process documentation for private-label flavor development.",
+          "file": "/resources/alcho-oem-implementation-guide-2026.txt",
+          "fileType": "TXT",
+          "fileSize": "1.2 KB",
+          "updated": "2026-05-06"
+        }
+      ]
+    },
+    {
+      "id": "certifications",
+      "title": "Certifications",
+      "description": "Food-safety and compliance documentation for audits and onboarding.",
+      "icon": "ShieldCheck",
+      "documents": [
+        {
+          "id": "halal-mui-2026",
+          "title": "Halal Certificate (MUI)",
+          "description": "Halal certification covering the Alcho Foods product range.",
+          "file": "/resources/alcho-halal-mui-certificate-2026.txt",
+          "fileType": "TXT",
+          "fileSize": "0.8 KB",
+          "updated": "2026-05-06",
+          "featured": true
+        },
+        {
+          "id": "fssc-22000-2026",
+          "title": "FSSC 22000 Certificate",
+          "description": "Food Safety System Certification for our manufacturing chain.",
+          "file": "/resources/alcho-fssc-22000-certificate-2026.txt",
+          "fileType": "TXT",
+          "fileSize": "0.8 KB",
+          "updated": "2026-05-06"
+        },
+        {
+          "id": "bpom-2026",
+          "title": "BPOM Registration",
+          "description": "Indonesia BPOM registration documentation for the registered range.",
+          "file": "/resources/alcho-bpom-registration-2026.txt",
+          "fileType": "TXT",
+          "fileSize": "0.8 KB",
+          "updated": "2026-05-06"
+        }
+      ]
+    }
+  ]
+}

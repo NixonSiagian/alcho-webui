@@ -1,0 +1,32 @@
+ALCHO FOODS — SAFETY DATA SHEET (SDS) 2026
+PT. NEW ALFA OMEGA UTAMA
+====================================================================
+
+PURPOSE
+Safety Data Sheets provide handling, storage, and safety specifications
+for Alcho Foods seasoning products in factory and warehouse environments.
+
+STANDARD SECTIONS
+1.  Identification
+2.  Hazard(s) identification
+3.  Composition / information on ingredients
+4.  First-aid measures
+5.  Fire-fighting measures
+6.  Accidental release measures
+7.  Handling and storage
+8.  Exposure controls / personal protection
+9.  Physical and chemical properties
+10. Stability and reactivity
+11. Toxicological information
+12-16. Ecological, disposal, transport, regulatory & other information
+
+AVAILABILITY
+Product-specific SDS documents are provided by the Quality Control
+department on authorized request for industrial and OEM accounts.
+
+CONTACT
+QC Department — Phone 031 866 8858 — WhatsApp 0812 4918 6623
+
+--------------------------------------------------------------------
+Digital placeholder. Replace with the official SDS PDF in
+/public/resources/ and update manifest.json (no code changes required).

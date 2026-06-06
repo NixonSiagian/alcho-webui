@@ -6,6 +6,7 @@
 import React, { useState } from 'react';
 import { cn } from '../../lib/utils';
 import { ImageOff } from 'lucide-react';
+import { IMG } from '../../assets/images';
 
 interface SafeImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   fallback?: string;
@@ -15,16 +16,16 @@ export const SafeImage: React.FC<SafeImageProps> = ({
   src, 
   alt, 
   className, 
-  fallback = "https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800", // Generic food background
+  fallback = IMG.product, // Real Alcho product shot — never external stock
   ...props 
 }) => {
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(true);
 
   return (
-    <div className={cn("relative overflow-hidden bg-white/5", className)}>
+    <div className={cn("relative overflow-hidden bg-brand-fill", className)}>
       {loading && (
-        <div className="absolute inset-0 animate-pulse bg-white/10 flex items-center justify-center">
+        <div className="absolute inset-0 animate-pulse bg-brand-border-strong flex items-center justify-center">
            <div className="w-8 h-8 rounded-full border-2 border-brand-primary/20 border-t-brand-primary animate-spin" />
         </div>
       )}

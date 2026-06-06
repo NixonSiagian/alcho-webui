@@ -13,6 +13,7 @@ import { AlchoLogo } from '../common/AlchoLogo';
 
 const NAV_LINKS = [
   { name: 'Products', href: '/products' },
+  { name: 'Intelligence', href: '/intelligence' },
   { name: 'Recipes', href: '/recipes' },
   { name: 'Horeca', href: '/horeca' },
   { name: 'OEM', href: '/oem' },
@@ -53,7 +54,7 @@ export default function Navbar() {
         className={cn(
           "fixed top-0 left-0 w-full z-[100] transition-all duration-500",
           isScrolled 
-            ? "py-4 bg-brand-bg/90 backdrop-blur-xl border-b border-white/5" 
+            ? "py-4 bg-brand-bg/90 backdrop-blur-xl border-b border-brand-border" 
             : "py-8 bg-transparent"
         )}
       >
@@ -63,37 +64,36 @@ export default function Navbar() {
             onClick={() => setMobileMenuOpen(false)}
             className="flex items-center gap-2 group relative z-[150]"
           >
-            <AlchoLogo className="w-24 md:w-32" />
+            <AlchoLogo className="w-28 md:w-36" />
           </Link>
 
           {/* Desktop Links */}
-          <div className="hidden lg:flex items-center gap-2">
-            <div className="flex items-center px-4 bg-white/5 border border-white/5 rounded-full mr-4 backdrop-blur-md">
+          <div className="hidden lg:flex items-center gap-5">
+            <div className="flex items-center gap-1">
               {NAV_LINKS.map((link) => (
                 <Link
                   key={link.name}
                   to={link.href}
                   className={cn(
-                    "px-6 py-4 text-brand-text-secondary hover:text-brand-primary text-[10px] uppercase font-bold tracking-widest transition-all relative group",
-                    location.pathname === link.href && "text-brand-primary"
+                    "relative px-3.5 py-2 rounded-full text-[10px] uppercase font-bold tracking-[0.18em] transition-colors",
+                    location.pathname === link.href
+                      ? "text-brand-primary"
+                      : "text-brand-text-secondary hover:text-brand-text hover:bg-brand-fill"
                   )}
                 >
                   {link.name}
-                  <div className={cn(
-                    "absolute bottom-2 left-6 right-6 h-[1px] bg-brand-primary transition-all scale-x-0 group-hover:scale-x-100",
-                    location.pathname === link.href && "scale-x-100"
-                  )} />
                 </Link>
               ))}
             </div>
-            <Link to="/contact" className="btn-primary py-4 px-8 text-[10px] uppercase tracking-widest flex items-center gap-2">
+            <span className="h-5 w-px bg-brand-border" />
+            <Link to="/contact" className="btn-primary py-3 px-6 text-[10px] uppercase tracking-[0.18em] flex items-center gap-1.5">
               Request Trial <ChevronRight size={14} />
             </Link>
           </div>
 
           {/* Mobile Menu Toggle */}
           <button 
-            className="lg:hidden text-white"
+            className="lg:hidden text-brand-text"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -116,7 +116,7 @@ export default function Navbar() {
                     to={link.href}
                     onClick={() => setMobileMenuOpen(false)}
                     className={cn(
-                      "text-white text-2xl font-bold py-4 border-b border-white/5 last:border-0",
+                      "text-brand-text text-2xl font-bold py-4 border-b border-brand-border last:border-0",
                       location.pathname === link.href && "text-brand-primary"
                     )}
                   >

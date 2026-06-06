@@ -7,6 +7,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { ChefHat, UtensilsCrossed, Hotel, Coffee, Utensils, CheckCircle2 } from 'lucide-react';
 import { SafeImage } from '../components/common/SafeImage';
+import { IMG } from '../assets/images';
 
 import SEO from '../components/common/SEO';
 
@@ -25,22 +26,22 @@ export default function HorecaSolutions() {
                   We provide the foundational flavor systems for Indonesia's leading hotel chains, restaurants, and catering services. Reduce labor, increase consistency.
                 </p>
                 <div className="flex flex-wrap gap-4 pt-8">
-                   <div className="flex items-center gap-3 px-6 py-3 bg-white/5 rounded-full border border-white/10">
-                      <CheckCircle2 size={16} className="text-emerald-500" />
+                   <div className="flex items-center gap-3 px-6 py-3 bg-brand-fill rounded-full border border-brand-border-strong">
+                      <CheckCircle2 size={16} className="text-brand-accent" />
                       <span className="text-xs font-bold uppercase tracking-widest">Consistency</span>
                    </div>
-                   <div className="flex items-center gap-3 px-6 py-3 bg-white/5 rounded-full border border-white/10">
-                      <CheckCircle2 size={16} className="text-emerald-500" />
+                   <div className="flex items-center gap-3 px-6 py-3 bg-brand-fill rounded-full border border-brand-border-strong">
+                      <CheckCircle2 size={16} className="text-brand-accent" />
                       <span className="text-xs font-bold uppercase tracking-widest">Cost Reduction</span>
                    </div>
-                   <div className="flex items-center gap-3 px-6 py-3 bg-white/5 rounded-full border border-white/10">
-                      <CheckCircle2 size={16} className="text-emerald-500" />
+                   <div className="flex items-center gap-3 px-6 py-3 bg-brand-fill rounded-full border border-brand-border-strong">
+                      <CheckCircle2 size={16} className="text-brand-accent" />
                       <span className="text-xs font-bold uppercase tracking-widest">Speed of Service</span>
                    </div>
                 </div>
              </div>
              <div className="relative aspect-video lg:aspect-square rounded-[4rem] overflow-hidden shadow-2xl">
-                <SafeImage src="/src/assets/images/alcho_chef_plating_1780645095547.png" alt="Professional Plating" className="w-full h-full" />
+                <SafeImage src={IMG.chef} alt="Professional Plating" className="w-full h-full" />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-bg/60 to-transparent" />
              </div>
           </div>
@@ -60,11 +61,11 @@ export default function HorecaSolutions() {
                 { title: "Coffee Shops", icon: <Coffee />, desc: "Gourmet syrups and specialty powders for modern cafes." },
                 { title: "Catering", icon: <Utensils />, desc: "Bulk-format flavor bases for large scale banquet services." }
               ].map((s, i) => (
-                <div key={i} className="p-10 bg-brand-surface rounded-[2.5rem] border border-white/5 hover:border-brand-primary/30 transition-all group">
+                <div key={i} className="p-10 bg-brand-surface rounded-[2.5rem] border border-brand-border hover:border-brand-primary/30 transition-all group">
                    <div className="w-16 h-16 bg-brand-primary/10 rounded-2xl flex items-center justify-center text-brand-primary mb-8 group-hover:scale-110 transition-transform">
                       {s.icon}
                    </div>
-                   <h3 className="text-white text-2xl font-bold mb-4">{s.title}</h3>
+                   <h3 className="text-brand-text text-2xl font-bold mb-4">{s.title}</h3>
                    <p className="text-brand-text-secondary text-sm leading-relaxed">{s.desc}</p>
                 </div>
               ))}
@@ -73,11 +74,11 @@ export default function HorecaSolutions() {
       </section>
 
       {/* Solutions */}
-      <section className="py-24 bg-brand-surface border-t border-white/5">
+      <section className="py-24 bg-brand-surface border-t border-brand-border">
         <div className="max-w-7xl mx-auto px-6">
            <div className="flex flex-col lg:flex-row gap-16 items-center">
               <div className="lg:order-2 w-full lg:w-1/2 rounded-[3.5rem] overflow-hidden aspect-video">
-                 <SafeImage src="https://images.unsplash.com/photo-1547928576-96537f6f1837?q=80&w=1200" alt="Cooking process" className="w-full h-full" />
+                 <SafeImage src={IMG.lab} alt="R&D flavor customization" className="w-full h-full" />
               </div>
               <div className="w-full lg:w-1/2 space-y-10">
                  <h2 className="text-4xl md:text-6xl font-bold leading-tight">Flavor <br /> <span className="italic text-brand-primary">Customization.</span></h2>

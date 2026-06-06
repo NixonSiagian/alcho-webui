@@ -26,7 +26,7 @@ export default function Contact() {
               <span className="text-brand-primary text-xs font-bold tracking-[0.3em] uppercase">Connect Strategy</span>
             </motion.div>
             
-            <h2 className="text-white text-5xl lg:text-8xl font-bold mb-10 leading-tight">
+            <h2 className="text-brand-text text-5xl lg:text-8xl font-bold mb-10 leading-tight">
               Let's Create <br />
               <span className="italic text-brand-primary">Better Taste.</span>
             </h2>
@@ -35,29 +35,29 @@ export default function Contact() {
             </p>
 
             <div className="grid sm:grid-cols-2 gap-8 mb-12">
-              <div className="p-8 rounded-[2rem] bg-brand-surface border border-white/5 space-y-4">
+              <div className="p-8 rounded-[2rem] bg-brand-surface border border-brand-border space-y-4">
                  <div className="w-10 h-10 rounded-xl bg-brand-primary/10 flex items-center justify-center text-brand-primary">
                     <Phone size={20} />
                  </div>
                  <div>
                     <p className="text-brand-text-secondary text-[10px] uppercase font-bold tracking-widest mb-1">Office Line</p>
-                    <p className="text-white font-bold text-lg">031 866 8858</p>
+                    <p className="text-brand-text font-bold text-lg">031 866 8858</p>
                  </div>
               </div>
-              <div className="p-8 rounded-[2rem] bg-brand-surface border border-white/5 space-y-4">
+              <div className="p-8 rounded-[2rem] bg-brand-surface border border-brand-border space-y-4">
                  <div className="w-10 h-10 rounded-xl bg-brand-primary/10 flex items-center justify-center text-brand-primary">
                     <MessageSquare size={20} className="text-[#25D366]" />
                  </div>
                  <div>
                     <p className="text-brand-text-secondary text-[10px] uppercase font-bold tracking-widest mb-1">WhatsApp</p>
-                    <p className="text-white font-bold text-lg">0812 4918 6623</p>
+                    <p className="text-brand-text font-bold text-lg">0812 4918 6623</p>
                  </div>
               </div>
             </div>
 
             <div className="flex gap-4">
               {[Linkedin, Facebook, Instagram].map((Icon, i) => (
-                <a key={i} href="#" className="w-12 h-12 bg-brand-surface border border-white/5 rounded-2xl flex items-center justify-center text-brand-text-secondary hover:text-brand-primary transition-all">
+                <a key={i} href="#" className="w-12 h-12 bg-brand-surface border border-brand-border rounded-2xl flex items-center justify-center text-brand-text-secondary hover:text-brand-primary transition-all">
                   <Icon size={18} />
                 </a>
               ))}
@@ -68,23 +68,23 @@ export default function Contact() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-brand-card p-10 lg:p-16 rounded-[4rem] border border-white/5 relative"
+            className="bg-brand-card p-10 lg:p-16 rounded-[4rem] border border-brand-border relative"
           >
-            <h3 className="text-white text-3xl mb-10">Business Inquiry</h3>
+            <h3 className="text-brand-text text-3xl mb-10">Business Inquiry</h3>
             <form className="space-y-6">
               <div className="space-y-2">
                  <label className="text-[10px] uppercase font-bold tracking-widest text-brand-text-secondary ml-4">Representative Name</label>
-                 <input type="text" className="w-full bg-brand-surface border border-white/5 rounded-[1.5rem] py-5 px-8 text-white font-bold outline-none focus:border-brand-primary/30 transition-all" placeholder="Enter your name" />
+                 <input type="text" className="w-full bg-brand-surface border border-brand-border rounded-[1.5rem] py-5 px-8 text-brand-text font-bold outline-none focus:border-brand-primary/30 transition-all" placeholder="Enter your name" />
               </div>
               
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-[10px] uppercase font-bold tracking-widest text-brand-text-secondary ml-4">Company Name</label>
-                  <input type="text" className="w-full bg-brand-surface border border-white/5 rounded-[1.5rem] py-5 px-8 text-white font-bold outline-none focus:border-brand-primary/30 transition-all" placeholder="Your organization" />
+                  <input type="text" className="w-full bg-brand-surface border border-brand-border rounded-[1.5rem] py-5 px-8 text-brand-text font-bold outline-none focus:border-brand-primary/30 transition-all" placeholder="Your organization" />
                 </div>
                 <div className="space-y-2">
                   <label className="text-[10px] uppercase font-bold tracking-widest text-brand-text-secondary ml-4">Interest Area</label>
-                  <select className="w-full bg-brand-surface border border-white/5 rounded-[1.5rem] py-5 px-8 text-white font-bold outline-none focus:border-brand-primary/30 transition-all appearance-none cursor-pointer">
+                  <select className="w-full bg-brand-surface border border-brand-border rounded-[1.5rem] py-5 px-8 text-brand-text font-bold outline-none focus:border-brand-primary/30 transition-all appearance-none cursor-pointer">
                      <option>Snack Seasoning</option>
                      <option>Bouillon & Base</option>
                      <option>Sauce Manufacturing</option>
@@ -95,7 +95,7 @@ export default function Contact() {
 
               <div className="space-y-2">
                  <label className="text-[10px] uppercase font-bold tracking-widest text-brand-text-secondary ml-4">Message / Requirements</label>
-                 <textarea className="w-full bg-brand-surface border border-white/5 rounded-[1.5rem] py-5 px-8 text-white font-bold outline-none focus:border-brand-primary/30 transition-all h-32 resize-none" placeholder="Tell us about your flavor needs..."></textarea>
+                 <textarea className="w-full bg-brand-surface border border-brand-border rounded-[1.5rem] py-5 px-8 text-brand-text font-bold outline-none focus:border-brand-primary/30 transition-all h-32 resize-none" placeholder="Tell us about your flavor needs..."></textarea>
               </div>
               
               <button className="btn-primary w-full py-6 flex items-center justify-center gap-4">

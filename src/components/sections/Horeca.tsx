@@ -60,7 +60,7 @@ export default function Horeca() {
             className="flex-1"
           >
             <span className="text-brand-yellow text-xs uppercase font-black tracking-[0.5em] mb-8 block">B2B CULINARY INFRASTRUCTURE</span>
-            <h2 className="text-white mb-10 leading-none">
+            <h2 className="text-brand-text mb-10 leading-none">
               Specialized Solutions for <br />
               <span className="italic font-serif text-brand-yellow">Horeca Industries.</span>
             </h2>
@@ -74,7 +74,7 @@ export default function Horeca() {
                   <PackageOpen className="text-brand-yellow group-hover:text-brand-maroon" size={24} />
                 </div>
                 <div>
-                   <h4 className="text-white font-serif font-black text-lg">OEM Factory</h4>
+                   <h4 className="text-brand-text font-serif font-black text-lg">OEM Factory</h4>
                    <p className="text-[10px] uppercase tracking-widest text-gray-500 font-black">Contract Manufacturing</p>
                 </div>
               </div>
@@ -83,7 +83,7 @@ export default function Horeca() {
                   <Settings2 className="text-brand-yellow group-hover:text-brand-maroon" size={24} />
                 </div>
                 <div>
-                  <h4 className="text-white font-serif font-black text-lg">Lab Access</h4>
+                  <h4 className="text-brand-text font-serif font-black text-lg">Lab Access</h4>
                   <p className="text-[10px] uppercase tracking-widest text-gray-500 font-black">Custom R&D Formulation</p>
                 </div>
               </div>
@@ -93,7 +93,7 @@ export default function Horeca() {
           <div className="flex-1 lg:pl-12">
             <div className="p-12 bg-gradient-to-br from-brand-maroon/30 to-brand-dark border border-brand-yellow/10 rounded-3xl relative overflow-hidden group">
                <div className="relative z-10">
-                 <h3 className="text-white text-3xl font-serif font-black mb-6">Bulk Logistics Fleet.</h3>
+                 <h3 className="text-brand-text text-3xl font-serif font-black mb-6">Bulk Logistics Fleet.</h3>
                  <p className="text-gray-400 leading-relaxed mb-10">We handle nationwide distribution with climate-controlled logistics ensuring your seasonings arrive in optimal condition, from factory to kitchen floor.</p>
                  <a href="#contact" className="text-brand-yellow flex items-center gap-3 text-xs uppercase font-black tracking-widest group-hover:gap-6 transition-all duration-500">
                    Schedule Facility Visit <ArrowRight size={18} />
@@ -117,7 +117,7 @@ export default function Horeca() {
                 "group p-10 bg-brand-dark/50 border rounded-2xl transition-all duration-700 cursor-pointer overflow-hidden relative",
                 activeSegment === i 
                   ? "border-brand-yellow bg-brand-yellow/[0.03] scale-[1.02]" 
-                  : "border-white/5 grayscale group-hover:grayscale-0"
+                  : "border-brand-border grayscale group-hover:grayscale-0"
               )}
             >
               <div className="relative z-10 flex flex-col h-full">
@@ -132,7 +132,7 @@ export default function Horeca() {
                 
                 <h4 className={cn(
                   "text-3xl font-serif font-black mb-6 transition-colors duration-500",
-                  activeSegment === i ? "text-brand-yellow" : "text-white"
+                  activeSegment === i ? "text-brand-yellow" : "text-brand-text"
                 )}>
                   {segment.name}
                 </h4>
@@ -171,7 +171,7 @@ export default function Horeca() {
       </div>
       
       {/* Animated Metrics Strip */}
-      <div className="mt-32 border-y border-white/5 bg-brand-dark/90 backdrop-blur-2xl py-20">
+      <div className="mt-32 border-y border-brand-border bg-brand-dark/90 backdrop-blur-2xl py-20">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 lg:grid-cols-4 gap-16">
           {[
             { value: '500T+', label: 'Annual Throughput' },

@@ -7,6 +7,7 @@ import { useRef, useEffect } from 'react';
 import { motion } from 'motion/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { IMG } from '../../assets/images';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,17 +15,17 @@ const SCENES = [
   {
     title: "Spice Screening",
     description: "Multi-stage screening ensures that only the purest particulates pass through, maintaining the high standard of Alcho's raw ingredients.",
-    image: "https://images.unsplash.com/photo-1590089415225-401ed6f9db8e?q=80&w=1200"
+    image: IMG.lab
   },
   {
     title: "Flavor Locking",
     description: "Our state-of-the-art milling systems ground spices at ultra-low temperatures, locking in the aromatic intensity required for industrial-scale consistency.",
-    image: "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?q=80&w=1200"
+    image: IMG.factory
   },
   {
     title: "Batch Master",
     description: "Large-scale blending units ensure that every kilogram of seasoning provides the exact same flavor profile, batch after batch, year after year.",
-    image: "https://images.unsplash.com/photo-1560611580-b9f0d7f688a2?q=80&w=1200"
+    image: IMG.product
   }
 ];
 
@@ -42,7 +43,7 @@ export default function ProductionJourney() {
               <div className="h-[1px] w-12 bg-brand-primary" />
               <span className="text-brand-primary text-xs font-bold tracking-[0.4em] uppercase">Industrial Heritage</span>
           </motion.div>
-          <h2 className="text-white text-5xl md:text-8xl mb-24">Our <span className="italic text-brand-primary">Process.</span></h2>
+          <h2 className="text-brand-text text-5xl md:text-8xl mb-24">Our <span className="italic text-brand-primary">Process.</span></h2>
       </div>
 
       <div className="space-y-[5vh] pb-[24vh]">
@@ -71,14 +72,14 @@ function SceneBlock({ scene, index }: { scene: any, index: number }) {
            className="relative z-20 max-w-4xl px-6 text-center"
         >
            <span className="text-brand-primary font-serif text-3xl md:text-5xl mb-12 block">Step {index + 1}</span>
-           <h3 className="text-white text-5xl md:text-8xl mb-8">{scene.title}</h3>
+           <h3 className="text-brand-text text-5xl md:text-8xl mb-8">{scene.title}</h3>
            <p className="text-2xl text-brand-text-secondary leading-relaxed max-w-2xl mx-auto">
              {scene.description}
            </p>
         </motion.div>
 
         {/* Ambient numbers in background */}
-        <div className="absolute -bottom-20 -right-20 text-[20rem] font-serif font-black text-white/5 pointer-events-none select-none">
+        <div className="absolute -bottom-20 -right-20 text-[20rem] font-serif font-black text-brand-text/10 pointer-events-none select-none">
            0{index + 1}
         </div>
     </div>

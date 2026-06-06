@@ -34,10 +34,10 @@ export default function Trust() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="flex flex-col items-start gap-4 p-8 rounded-sm bg-zinc-900/40 border border-white/5"
+              className="flex flex-col items-start gap-4 p-8 rounded-sm bg-zinc-900/40 border border-brand-border"
             >
               <div className="text-brand-gold">{item.icon}</div>
-              <h4 className="text-white text-xs uppercase tracking-[0.2em] font-bold">{item.title}</h4>
+              <h4 className="text-brand-text text-xs uppercase tracking-[0.2em] font-bold">{item.title}</h4>
               <p className="text-gray-500 text-[10px] leading-relaxed uppercase tracking-widest font-medium">
                 {item.desc}
               </p>
@@ -76,8 +76,8 @@ function MetricCard({ metric, index }: { metric: any, index: number }) {
   }, [isInView, metric.value]);
 
   return (
-    <div ref={ref} className="text-center p-8 border-r border-white/5 last:border-0">
-      <div className="font-serif text-5xl md:text-6xl text-white font-bold mb-4 tracking-tighter">
+    <div ref={ref} className="text-center p-8 border-r border-brand-border last:border-0">
+      <div className="font-serif text-5xl md:text-6xl text-brand-text font-bold mb-4 tracking-tighter">
         {count}{metric.suffix}
       </div>
       <div className="text-brand-gold text-[10px] uppercase tracking-[0.4em] font-bold">

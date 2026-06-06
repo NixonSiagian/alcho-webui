@@ -1,0 +1,78 @@
+{
+  "defaults": {
+    "brand": "Alcho Foods",
+    "manufacturer": "PT. NEW ALFA OMEGA UTAMA",
+    "lastUpdated": "2026-05-06",
+    "unavailableLabel": "Available Upon Request",
+    "storageConditions": [
+      "Store in a cool and dry place.",
+      "Avoid direct sunlight.",
+      "Keep package tightly sealed after opening."
+    ],
+    "shelfLife": "12 Months (Typical)",
+    "shelfLifeNote": "Contact Sales for product-specific shelf life.",
+    "facilityCertifications": ["FSSC 22000", "BPOM Registered"],
+    "specificationFields": [
+      "Appearance",
+      "Nutritional Information",
+      "Allergen Information",
+      "Moisture / Physicochemical",
+      "Microbiological",
+      "Storage Stability"
+    ],
+    "documents": {
+      "priceList": "pricelist-horeca-2026",
+      "catalog": "product-catalog-2026"
+    },
+    "contact": {
+      "team": "Alcho Technical Team",
+      "phone": "031 866 8858",
+      "whatsapp": "0812 4918 6623",
+      "email": "qc@alchofoods.com"
+    }
+  },
+  "categoryProfiles": {
+    "Sauces & Bumbu Dasar": {
+      "applications": ["Marinades", "Glazing", "Dipping Sauce", "Stir Fry", "Finishing Sauce"],
+      "attributes": ["Ready to Use", "Industrial Grade", "Consistent Flavor Profile", "Heat Stable"]
+    },
+    "Bouillon & Seasoning": {
+      "applications": ["Soup Base", "Broth", "Noodle Seasoning", "Rice Dishes", "Marinade Base"],
+      "attributes": ["Easy Dispersion", "Consistent Taste", "High Solubility", "Suitable for Horeca Applications"]
+    },
+    "Snack Seasoning": {
+      "applications": ["Coating for Fried Snacks", "Extruded Snacks", "Potato Chips", "Popcorn", "Crackers"],
+      "attributes": ["Easy Dispersion", "Even Coating", "Consistent Taste", "Suitable for Horeca Applications"]
+    }
+  },
+  "productProfiles": {
+    "SB-001": { "applications": ["BBQ Chicken", "Grilled Meat", "Burgers", "Marinades"] },
+    "SB-002": { "applications": ["Glazing", "Chicken Dishes", "Stir Fry", "Frozen Food Applications"] },
+    "SB-003": { "applications": ["Takoyaki", "Okonomiyaki", "Savory Pancakes", "Topping Drizzle"] },
+    "SB-004": { "applications": ["Grilled Beef", "Steak", "Hot Plate Dishes", "Stir Fry"] },
+    "BS-001": { "applications": ["Soup Base", "Noodles", "Fried Chicken Seasoning", "Rice Dishes"] },
+    "BS-002": { "applications": ["Soup Base", "Noodles", "Fried Chicken Seasoning", "Rice Dishes"] },
+    "BS-003": { "applications": ["Soup Base", "Broth", "Meatball Soup", "Rice Dishes"] },
+    "BS-004": { "applications": ["Soup Base", "Broth", "Meatball Soup", "Rice Dishes"] },
+    "BS-005": { "applications": ["Seasoning Blend", "Marinades", "Stir Fry", "Topping"] },
+    "BS-006": { "applications": ["Fried Chicken Coating", "Kremes Topping", "Crispy Garnish"] },
+    "BS-007": { "applications": ["Dry Rub", "Grilled Meat", "Roast", "Marinades"] },
+    "BS-008": { "applications": ["Seasoning Blend", "Marinades", "Sauce Base", "Dough & Bread"] },
+    "BS-009": { "applications": ["Soup Base", "Grilled Chicken", "Marinades", "Snack Seasoning"] },
+    "BS-010": { "applications": ["Meatball Soup Base", "Broth", "Noodle Soup"] },
+    "BS-011": { "applications": ["Beef Broth", "Soup Base", "Rice Dishes", "Marinade Base"] },
+    "BS-012": { "applications": ["Chicken Soup Base", "Noodle Soup", "Broth"] },
+    "BS-013": { "applications": ["Soup Seasoning", "Marinades", "Stir Fry", "General Seasoning"] },
+    "BS-014": { "applications": ["Chicken Broth", "Soup Base", "Rice Dishes"] },
+    "SS-001": { "applications": ["Coating for Fried Snacks", "Potato Chips", "Crackers", "Extruded Snacks"] },
+    "SS-002": { "applications": ["Coating for Fried Snacks", "Potato Chips", "Crackers", "Extruded Snacks"] },
+    "SS-003": { "applications": ["Popcorn", "Corn Snacks", "Potato Chips", "Extruded Snacks"] },
+    "SS-004": { "applications": ["Popcorn", "Corn Snacks", "Potato Chips", "Extruded Snacks"] },
+    "SS-005": { "applications": ["Potato Chips", "Popcorn", "Extruded Snacks", "Fries Coating"] },
+    "SS-006": { "applications": ["Crackers", "Potato Chips", "Extruded Snacks"] },
+    "SS-007": { "applications": ["Potato Chips", "Extruded Snacks", "Popcorn", "Nuts"] },
+    "SS-008": { "applications": ["Potato Chips", "Extruded Snacks", "Popcorn", "Nuts"] },
+    "SS-009": { "applications": ["Potato Chips", "Extruded Snacks", "Crackers"] },
+    "SS-010": { "applications": ["Potato Chips", "Popcorn", "Rice Crackers", "Extruded Snacks"] }
+  }
+}
