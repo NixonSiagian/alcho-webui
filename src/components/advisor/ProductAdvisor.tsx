@@ -7,7 +7,7 @@ import { useEffect, useLayoutEffect, useRef, useState, type ReactNode } from 're
 import { motion, AnimatePresence } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { Sparkles, X, Send, FileText, BookOpen, Boxes, ChevronDown, ChevronUp } from 'lucide-react';
-import { ADVISOR_REFUSAL, isAdvisorConfigured } from '../../lib/advisor-config';
+import { ADVISOR_REFUSAL, isAdvisorConfigured } from '../../lib/advisor';
 import type { AdvisorSource } from '../../lib/advisor';
 import { PRODUCTS } from '../../data/products';
 import { Markdown } from './Markdown';
