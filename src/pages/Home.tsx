@@ -19,9 +19,10 @@ import SEO from '../components/common/SEO';
 export default function Home() {
   return (
     <div className="w-full">
-      <SEO 
-        title="Industrial Flavor Solutions" 
-        description="PT. NEW ALFA OMEGA UTAMA - Leading provider of industrial-scale seasoning systems and premium flavor solutions for Horeca and OEM in Indonesia."
+      <SEO
+        title="Indonesian Seasoning & Food Ingredients Manufacturer"
+        description="Meet Alcho, the seasoning and food ingredients brand of PT. NEW ALFA OMEGA UTAMA. We develop seasoning systems and flavor solutions for HORECA, OEM food manufacturers, and distributors in Indonesia."
+        keywords="Alcho, Alcho Foods, Indonesian seasoning manufacturer, food ingredients Indonesia, industrial seasoning, HORECA seasoning, OEM seasoning"
       />
       <Hero />
       
